@@ -12,21 +12,11 @@
     <script src="static/js/index.js"></script>
     <div class = "main-space">
         <div class = "tab-bar-button">
-            <nav>
                 <form action="/home" method="post">
-                    <ul class = "tab-bar-button-ul">
-                        <li><a href="#">File</a></li>
-                        <li><a href="#">Edit</a></li>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Tables</a></li>
-                        <li><a href="#">Queries</a></li>
-                        <li><a href="#">Settings</a></li>
-                        <li><button class="run-button" type="submit" onclick="eventClickStart()" name ="button" value = "start"><i class="fas fa-play"></i> Run</button></li>
-                        <li><button class="stop-button" type="submit" onclick="eventClickEnd()" name ="button" value = "end"><i class="fas fa-stop"></i> Stop</button></li>
-                        <li><div class="status-bar"></div></li>
-                    </ul>
+                       <ul class="button-bar">
+                            <li><button class="button" onclick="openBlankTab()">Open New Tab</button></li>
+                        </ul>
                 </form>
-            </nav>
         </div> 
         <div class="workspace">
             <header class="header">
