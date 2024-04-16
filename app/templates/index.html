@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MSSQL API Management App</title>
+    <link rel="stylesheet" href="static/css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <script src="static/js/index.js"></script>
+    <div class = "main-space">
+        <div class = "tab-bar-button">
+            <nav>
+                <form action="/home" method="post">
+                    <ul class = "tab-bar-button-ul">
+                        <li><a href="#">File</a></li>
+                        <li><a href="#">Edit</a></li>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Tables</a></li>
+                        <li><a href="#">Queries</a></li>
+                        <li><a href="#">Settings</a></li>
+                        <li><button class="run-button" type="submit" onclick="eventClickStart()" name ="button" value = "start"><i class="fas fa-play"></i> Run</button></li>
+                        <li><button class="stop-button" type="submit" onclick="eventClickEnd()" name ="button" value = "end"><i class="fas fa-stop"></i> Stop</button></li>
+                        <li><div class="status-bar"></div></li>
+                    </ul>
+                </form>
+            </nav>
+        </div> 
+        <div class="workspace">
+            <header class="header">
+                <img class = "header-icon" src ="statics/images/unilever-logo-white.svg">
+                <p>Sang Tao New Deoc Dashboard</p>
+            </header>
+            <div class="database-view">
+                <div class="database-view-header">
+                    <p>Object Explorer</p>
+                </div>
+                <div class="database-view-body">
+                </div>
+            </div>
+            <div class="editor-space">
+                <!-- SQL query editor goes here -->
+            </div>
+            <div class="prototype-column">
+                <div class="prototype-column-header">
+                    <p>Prototype</p>
+                </div>
+                <div class="prototype-column-body">
+                    <!-- Prototype column content goes here -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <p>&copy; 2024 Unilever</p>
+    </footer>
+    <script src="static/js/index.js"></script>
+    <script src="static/js/tree.js"></script>
+    <script src="static/js/button.js"></script>
+</body>
+</html>
