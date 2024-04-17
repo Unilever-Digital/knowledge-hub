@@ -1,26 +1,102 @@
-.body {
+body {
     position: fixed;
     flex-direction: row;
-    background-color: #ffffff;
+    margin-left: 0px;
+    margin-top: 0px;
 }
 
 .main-space {
+    background-color: #f6f6f6;
     position: fixed;
     display: flex;
     flex-direction: column;
+    height: 100%;
+    width: 100%;
+    margin-left: 0px;
+}
+
+.tab-bar-button {
+    margin-left: 0px;
+    height: 100%;
+    width: 60px;
+    background-color: #5d5d5d;
+}
+
+.workspace {
+    position: absolute;
+    margin-left: 60px;
+    height: 100%;
+    width: calc(100% -60px);
+    background-color: #f6f6f6;
+}
+
+.workspace-header {
+    position: fixed;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 100%;
+    display: flex;
+    height: 140px;
+    background-color: #ffffff;
+}
+
+.workspace-header p {
+    position: absolute;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    margin-left: 150px;
+    bottom: 18px;
+    margin-top: auto;
+    height: 50px;
+    width: 400px;
+    color: #000000;
+}
+
+.header-icon {
+    visibility: visible;
+    width: 150px;
+    height: auto;
+    /* Maintain aspect ratio */
+}
+
+.machine-bar {
+    width: 500px;
+    align-self: center;
+}
+
+.main-workspace {
+    position: absolute;
+    width: 100%;
+    margin-top: 200px;
+    background-color: #f6f6f6;
+}
+
+.dashboard-container {
+    position: absolute;
+    height: 90%;
+    width: 100%;
+    background-color: #f6f6f6;
+}
+
+.component {
+    background-color: white;
+    border-color: #000000;
+    border-width: 1px;
 }
 
 .footer {
-    background-color: #333;
+    background-color: #9e9d9d;
     color: #fff;
     position: fixed;
     bottom: 0;
     width: 100%;
-    height: 40px;
+    height: 25px;
 }
 
-.footer a {
+.footer p {
     text-align: left;
+    margin-top: 2px;
 }
 
 .button-bar {

@@ -12,42 +12,31 @@
     <script src="static/js/index.js"></script>
     <div class = "main-space">
         <div class = "tab-bar-button">
-                <form action="/home" method="post">
-                       <ul class="button-bar">
-                            <li><button class="button" onclick="openBlankTab()">Open New Tab</button></li>
-                        </ul>
-                </form>
+            <form action="/home" method="post">
+                <ul class="button-bar">
+                    <li><button class="button" onclick="openDeocTab()"> </button></li>
+                    <li><button class="button" onclick="openOPETab()"> </button></li>
+                </ul>
+            </form>
         </div> 
         <div class="workspace">
-            <header class="header">
-                <img class = "header-icon" src ="statics/images/unilever-logo-white.svg">
-                <p>Sang Tao New Deoc Dashboard</p>
-            </header>
-            <div class="database-view">
-                <div class="database-view-header">
-                    <p>Object Explorer</p>
-                </div>
-                <div class="database-view-body">
+            <div class="workspace-header">
+                <img class = "header-icon" src ="static/images/logo-animated.svg">
+                <p>Control Room DEOC Dashboard</p>
+                <div class= "machine-bar">
+                
                 </div>
             </div>
-            <div class="editor-space">
-                <!-- SQL query editor goes here -->
+            <div class="main-workspace">
+                <div class="dmain-workspace-view-header">
+                </div>
+                <div class="dashboard-container">
+                </div>
             </div>
-            <div class="prototype-column">
-                <div class="prototype-column-header">
-                    <p>Prototype</p>
-                </div>
-                <div class="prototype-column-body">
-                    <!-- Prototype column content goes here -->
-                </div>
+            <div  class="footer">
+                <p>&copy; 2024 Unilever</p>
             </div>
         </div>
     </div>
-    <footer class="footer">
-        <p>&copy; 2024 Unilever</p>
-    </footer>
-    <script src="static/js/index.js"></script>
-    <script src="static/js/tree.js"></script>
-    <script src="static/js/button.js"></script>
 </body>
 </html>
