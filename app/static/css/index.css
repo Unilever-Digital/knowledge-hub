@@ -32,21 +32,22 @@ body {
 
 .workspace-header {
     position: fixed;
-    margin-top: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
-    width: 100%;
+    top: 10px;
+    margin-left: 70px;
+    right: 10px;
+    min-width: calc(100% - 80px);
+    max-width: calc(100% - 80px);
     display: flex;
-    height: 140px;
+    height: 100px;
     background-color: #ffffff;
 }
 
 .workspace-header p {
     position: absolute;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
-    margin-left: 150px;
-    bottom: 18px;
+    font-size: 14px;
+    margin-left: 120px;
+    bottom: 0px;
     margin-top: auto;
     height: 50px;
     width: 400px;
@@ -55,13 +56,15 @@ body {
 
 .header-icon {
     visibility: visible;
-    width: 150px;
-    height: auto;
+    height: 150px;
+    margin-top: 0px;
+    width: auto;
     /* Maintain aspect ratio */
 }
 
 .machine-bar {
     width: 500px;
+    border-radius: 8px;
     align-self: center;
 }
 
@@ -73,10 +76,16 @@ body {
 }
 
 .dashboard-container {
-    position: absolute;
-    height: 90%;
-    width: 100%;
-    background-color: #f6f6f6;
+    position: fixed;
+    display: flex;
+    top: 120px;
+    left: 70px;
+    right: 10px;
+    bottom: 60px;
+    grid-template-columns: 3;
+    width: calc(100% - 70px -10px);
+    height: calc(100% - 120px - 60px);
+    background-color: #ffffff;
 }
 
 .component {
@@ -126,3 +135,28 @@ body {
 .button.active {
     background-color: rgba(255, 255, 255, 0.1);
 }
+
+.dashboard {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* Adjust the height as needed */
+    border-width: 1px;
+    border-color: #000000;
+    width: 300px;
+    height: 500px;
+}
+
+#myChart {
+    width: 80%;
+    /* Adjust the width as needed */
+    max-width: 600px;
+    /* Limit the maximum width */
+    height: auto;
+}
+
+
+/* Optional: Add additional styles for the chart canvas or its parent container */

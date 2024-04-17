@@ -1,4 +1,4 @@
-function createChartDashboard() {
+async function createChartDashboard() {
     const dashboard = document.createElement("div");
     dashboard.classList.add("dashboard");
 
@@ -50,8 +50,8 @@ function createChartDashboard() {
 }
 
 
-// Usage
-document.addEventListener("DOMContentLoaded", function() {
-    const dashboardContainer = document.getElementById("dashboard-container");
-    dashboardContainer.appendChild(createChartDashboard());
-};
+document.addEventListener("DOMContentLoaded", async function() {
+    const dashboardContainer = document.querySelector(".dashboard-container");
+    const chart = await createChartDashboard();
+    dashboardContainer.appendChild(chart);
+});
