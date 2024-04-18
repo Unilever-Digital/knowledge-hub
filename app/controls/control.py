@@ -5,6 +5,7 @@ import pymongo
 import schedule
 import time
 import requests
+from datetime import datetime
 import pyodbc
 from app.utils.function import *
 
@@ -225,6 +226,24 @@ def realtime_rocessing():
             # Assuming columns and row data are compatible
             data = dict(zip(columns, row))
             collection.insert_one(data)
+
+######## processing in client dashboard app #################
+
+def queryDataDeoc(start, end, table):
+    collection = connectToMongoDB("U-CheckDate-Barcode", table)
+    start_date = datetime.strptime("2024-04-17T00:00:00", "%Y-%m-%dT%H:%M:%S")
+
+    end_date = datetime.strptime("2024-04-19T23:59:59", "%Y-%m-%dT%H:%M:%S")
+    query = {
+        "dateField": {
+            "$gte": start,
+            "$lte": end
+        }
+    }
+    cursor = collection.find(query)
+    return cursor
+    
+
     
 
 

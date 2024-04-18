@@ -46,26 +46,23 @@ def home():
     return render_template("index.html")
 
 
-@event.route("/button_click", methods=["POST", "GET"])
-def event_schedule():
-    print("click")
-    if request.method == "POST":
-        terminate_thread = False
-        threading.Thread(target=schedule_api_calls).start()
-
-
-@event.route("/button_end", methods=["POST", "GET"])
-def event_end():
-    print("click")
-    if request.method == "POST":
-        terminate_thread = True
-        
 @event.route("/schema", methods=["POST", "GET"])
 def schema():
     if request.method == "POST":
         return jsonify(read_table_json())
     print(jsonify(read_table_json()))
     return jsonify(read_table_json())
+
+
+@event.route("/data-deoc", methods=["POST", "GET"])
+def data_deoc():
+    if request.method == "POST":
+        request_value = request.get.values()
+        data = queryDataDeoc(data["start"], data["end"])
+        return jsonify(read_table_json())
+    print(jsonify(read_table_json()))
+    return jsonify(read_table_json())
+
         
 
 # Add other routes and functionality as needed
