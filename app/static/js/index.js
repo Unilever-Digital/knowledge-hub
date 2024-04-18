@@ -29,7 +29,17 @@ async function eventClickEnd() {
         console.log(data);
 }
 
+function addDateTime() {
+    const date = new Date();
+    const component_date_time = document.createElement("div");
+    component_date_time.classList.add("datetime-component");
+    const datatime = document.createElement("a");
+    datatime.innerHTML = date.toString();
+    component_date_time.appendChild(datatime);
+    return component_date_time
+}
+
 document.addEventListener("DOMContentLoaded", function() {
-    button_start.addEventListener("click",eventClickStart);
-    button_end.addEventListener("click",eventClickEnd);
+    const header_workspace = document.querySelector(".workspace-header");
+    header_workspace.appendChild(addDateTime());
 });

@@ -22,6 +22,19 @@ body {
     background-color: #5d5d5d;
 }
 
+.tab-bar-button button {
+    margin-top: 0px;
+    height: 60px;
+    width: 60px;
+    border: none;
+}
+
+.tab-bar-button button i {
+    height: 100px;
+    width: 100px;
+    font-size: 26px;
+}
+
 .workspace {
     position: absolute;
     margin-left: 60px;
@@ -54,6 +67,18 @@ body {
     color: #000000;
 }
 
+.datetime-component {
+    position: absolute;
+    font-family: Arial, Helvetica, sans-serif;
+    right: 20px;
+    bottom: 45px;
+    font-size: 14px;
+}
+
+.datetime-component a {
+    overflow: auto;
+}
+
 .header-icon {
     visibility: visible;
     height: 150px;
@@ -77,12 +102,12 @@ body {
 
 .dashboard-container {
     position: fixed;
-    display: flex;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
     top: 120px;
     left: 70px;
     right: 10px;
     bottom: 60px;
-    grid-template-columns: 3;
     width: calc(100% - 70px -10px);
     height: calc(100% - 120px - 60px);
     background-color: #ffffff;
@@ -121,8 +146,7 @@ body {
     background-color: transparent;
     border: none;
     color: #ffffff;
-    padding: 8px 15px;
-    margin-right: 5px;
+    padding: 0px 0px;
     cursor: pointer;
     font-size: 14px;
     transition: background-color 0.3s ease;
@@ -142,20 +166,63 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     /* Adjust the height as needed */
     border-width: 1px;
     border-color: #000000;
-    width: 300px;
-    height: 500px;
+    max-width: 700px;
+    max-height: 400px;
+    background-color: #ffffff;
 }
 
-#myChart {
-    width: 80%;
-    /* Adjust the width as needed */
-    max-width: 600px;
-    /* Limit the maximum width */
-    height: auto;
+#bar-chart-deoc-defect {
+    width: 700px;
+    height: 400px;
+    grid-column: 1;
+    margin-left: 10px;
+}
+
+#line-chart-deoc {
+    grid-column: 1;
+    width: 700px;
+    height: 300px;
+    margin-left: 10px;
+}
+
+#line-chart-line {
+    margin-top: 50px;
+    grid-column: 2;
+    width: 500px;
+    height: 300px;
+}
+
+#line-chart-sku {
+    grid-column: 2;
+    width: 500px;
+    height: 300px;
+}
+
+.inside-container {
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    height: 700px;
+    width: 350px;
+    border-width: 1px;
+    border-color: #000000;
+    grid-column: 3;
+    z-index: 10;
+    background-color: #ffffff;
+}
+
+.inside-header {
+    position: absolute;
+    height: 30px;
+    width: 100%;
+    background-color: rgb(3, 3, 135);
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 14px;
 }
 
 
