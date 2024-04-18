@@ -39,7 +39,26 @@ function addDateTime() {
     return component_date_time
 }
 
+function buttonGen(){
+    const buttons = document.querySelectorAll('.button');
+    let activeButton = null; // Variable to track active button
+
+    buttons.forEach(button => {
+        button.classList.add('unactive'); 
+        button.addEventListener('click', () => {
+            if (activeButton) {
+                activeButton.classList.add('unactive');
+                activeButton.classList.remove('active'); // Deactivate previous button
+            }
+            activeButton = button;
+            button.classList.remove('unactive');
+            button.classList.add('active'); // Activate clicked button
+        });
+    });
+}
+
 document.addEventListener("DOMContentLoaded", function() {
+    buttonGen();
     const header_workspace = document.querySelector(".workspace-header");
     header_workspace.appendChild(addDateTime());
 });
