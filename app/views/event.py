@@ -32,7 +32,7 @@ def schedule_api_calls():
         time.sleep(20)
         
 
-@event.route("/home", methods=["POST", "GET"])
+@event.route("/deoc-home-hcl", methods=["POST", "GET"])
 def home():
     global terminate_thread
     if request.method == "POST":
@@ -43,14 +43,6 @@ def home():
         elif request.values.get('button') == 'start':
             terminate_thread = True
     return render_template("index.html")
-
-
-@event.route("/schema", methods=["POST", "GET"])
-def schema():
-    if request.method == "POST":
-        return jsonify(read_table_json())
-    print(jsonify(read_table_json()))
-    return jsonify(read_table_json())
 
 
 @event.route("/data-deoc", methods=["POST", "GET"])

@@ -54,7 +54,7 @@ def create_app(test_config=None):
     except OSError:
         pass
 
-    @app.route('/')
+    @app.route('/deoc-hcl-home')
     def main():
         return redirect(url_for('event.home'))
     
