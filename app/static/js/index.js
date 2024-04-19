@@ -3,6 +3,29 @@
 const button_start = document.querySelector(".run-button");
 const button_end = document.querySelector(".stop-button");
 
+// Function to create and style a date input element
+function createDateInput() {
+  const dateInput = document.createElement("input");
+  dateInput.type = "date";
+  dateInput.classList.add("date-picker");
+  return dateInput;
+}
+
+// Function to initialize the date picker and potentially add event listeners
+function initDatePicker() {
+  const datePicker = createDateInput();
+  const com = document.querySelector(".main-workspace-view-header");
+  com.appendChild(datePicker);
+
+  // (Optional) Add event listeners for date selection or other functionalities
+  datePicker.addEventListener("change", (event) => {
+    const selectedDate = event.target.value;
+    console.log("Selected Date:", selectedDate);
+  });
+}
+
+// Initialize the date picker
+
 async function eventClickStart() {
         // Send a request to your Flask server when the button is clicked
         const response = await fetch("/button_click", {
@@ -61,4 +84,5 @@ document.addEventListener("DOMContentLoaded", function() {
     buttonGen();
     const header_workspace = document.querySelector(".workspace-header");
     header_workspace.appendChild(addDateTime());
+    initDatePicker();
 });

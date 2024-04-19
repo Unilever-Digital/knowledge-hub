@@ -36,7 +36,6 @@ def schedule_api_calls():
 def home():
     global terminate_thread
     if request.method == "POST":
-        print("click")
         from app import terminate_thread
         if request.values.get('button') == 'start':
             terminate_thread = False

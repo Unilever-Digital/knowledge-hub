@@ -65,6 +65,12 @@ body {
     color: #000000;
 }
 
+.machine-bar {
+    position: relative;
+    margin-left: 30%;
+    width: 200px;
+}
+
 .datetime-component {
     position: absolute;
     font-family: Arial, Helvetica, sans-serif;
@@ -92,19 +98,28 @@ body {
 }
 
 .main-workspace {
-    position: absolute;
-    width: 100%;
-    margin-top: 200px;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    width: calc(100% - 10px - 70px);
+    margin-top: 120px;
     background-color: #f6f6f6;
 }
 
+.main-workspace-view-header {
+    position: absolute;
+    height: 30px;
+    right: 0px;
+    z-index: 100;
+}
+
 .dashboard-container {
-    position: fixed;
+    position: absolute;
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
-    top: 120px;
-    left: 70px;
-    right: 10px;
+    top: 30px;
+    left: 20px;
+    right: 0px;
     bottom: 60px;
     width: calc(100% - 70px -10px);
     height: calc(100% - 120px - 60px);
@@ -135,10 +150,17 @@ body {
 
 .button-bar {
     list-style-type: none;
-    padding: 0;
+    padding: 0 0;
+    margin-top: 0px;
+}
+
+.button-bar ul {
+    position: absolute;
+    margin-top: 0px;
 }
 
 .button-bar li {
+    margin-top: 0px;
     display: inline;
 }
 
@@ -174,43 +196,56 @@ body {
     /* Adjust the height as needed */
     border-width: 1px;
     border-color: #000000;
-    max-width: 700px;
+    max-width: 750px;
     max-height: 400px;
     background-color: #ffffff;
 }
 
 #bar-chart-deoc-defect {
+    top: 50px;
     width: 700px;
-    height: 400px;
-    grid-column: 1;
-    margin-left: 10px;
+    height: 300px;
+    margin-left: 0px;
 }
 
 #line-chart-deoc {
-    grid-column: 1;
+    top: 100px;
     width: 700px;
     height: 300px;
-    margin-left: 10px;
+    margin-left: 0px;
 }
 
 #line-chart-line {
     margin-top: 50px;
-    grid-column: 2;
     width: 500px;
     height: 300px;
 }
 
 #line-chart-sku {
-    grid-column: 2;
+    top: 50px;
     width: 500px;
     height: 300px;
 }
 
+.container-column1 {
+    grid-column: 1;
+    width: 710px;
+    height: 750px;
+    background-color: #ffffff;
+}
+
+.container-column2 {
+    grid-column: 2;
+    width: 500px;
+    height: 750px;
+    background-color: #ffffff;
+}
+
 .inside-container {
     position: absolute;
-    top: 50px;
-    right: 10px;
-    height: 700px;
+    top: 0px;
+    right: 0px;
+    height: 750px;
     width: 350px;
     border-width: 1px;
     border-color: #000000;
@@ -228,6 +263,10 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     font-size: 14px;
+}
+
+.inside-header-text {
+    margin-top: 5px;
 }
 
 

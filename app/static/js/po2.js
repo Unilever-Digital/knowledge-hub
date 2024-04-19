@@ -5,8 +5,8 @@ async function createChartDashboard() {
 
     // Create chart canvas
     const chartCanvas = document.createElement("canvas"); // Changed ID to avoid duplication
-    chartCanvas.width = 700;
-    chartCanvas.height = 350;
+    chartCanvas.width = 690;
+    chartCanvas.height = 300;
     dashboard.appendChild(chartCanvas);
 
     // Initialize Chart.js
@@ -43,14 +43,14 @@ async function createChartDashboard() {
                     beginAtZero: true,
                     ticks: {
                         font: {
-                            size: 14 // Adjust the font size as needed
+                            size: 12 // Adjust the font size as needed
                         }
                     }
                 },
                 x: {
                     ticks: {
                         font: {
-                            size: 11 // Adjust the font size as needed
+                            size: 10 // Adjust the font size as needed
                         }
                     }
                 }
@@ -196,7 +196,7 @@ async function createLineChartSKUTrend() {
 async function createContainerInside() {
     const container_inside = document.createElement("div");
     container_inside.classList.add("inside-container");
-    container_inside.innerHTML = "<div class = 'inside-header'> <a> Inside AI </a></div>"
+    container_inside.innerHTML = "<div class = 'inside-header'> <p class ='inside-header-text'> Inside AI </p></div>"
     return container_inside;
 }
 
@@ -207,9 +207,18 @@ document.addEventListener("DOMContentLoaded", async function() {
     const deoc = await createLineChartDEOCTrend();
     const container_inside = await createContainerInside();
     const sku = await createLineChartSKUTrend();
-    dashboardContainer.appendChild(chart);
-    dashboardContainer.appendChild(line);
+
+    const container_col1 = document.createElement("div");
+    container_col1.classList.add("container-column1");
+    container_col1.appendChild(chart);
+    container_col1.appendChild(deoc);
+
+    const container_col2 = document.createElement("div");
+    container_col2.classList.add("container-column2");
+    container_col2.appendChild(line);
+    container_col2.appendChild(sku);
+
+    dashboardContainer.appendChild(container_col1);
+    dashboardContainer.appendChild(container_col2);
     dashboardContainer.appendChild(container_inside);
-    dashboardContainer.appendChild(deoc);
-    dashboardContainer.appendChild(sku);
 });
