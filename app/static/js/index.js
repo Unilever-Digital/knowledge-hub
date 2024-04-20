@@ -120,5 +120,8 @@ function unactiveAll(){
 }
 
 document.addEventListener("DOMContentLoaded", function() {
+    const commer = document.querySelector(".workspace-header");
+    const date_time = addDateTime();
+    commer.appendChild(date_time);
     eventHomeClick();
 });

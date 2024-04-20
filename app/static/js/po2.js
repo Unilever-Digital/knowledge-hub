@@ -200,6 +200,29 @@ async function createContainerInside() {
     return container_inside;
 }
 
+// Function to create and style a date input element
+function createDateInput() {
+  const dateInput = document.createElement("input");
+  dateInput.type = "date";
+  dateInput.classList.add("date-picker");
+  return dateInput;
+}
+
+// Function to initialize the date picker and potentially add event listeners
+function initDatePicker() {
+  const datePicker = createDateInput();
+  const com = document.querySelector(".main-workspace-view-header");
+  com.appendChild(datePicker);
+
+  // (Optional) Add event listeners for date selection or other functionalities
+  datePicker.addEventListener("change", (event) => {
+    const selectedDate = event.target.value;
+    console.log("Selected Date:", selectedDate);
+  });
+}
+
+// Initialize the date picker
+
 async function eventClickDeocStnDashBoard(){
     const machine_bar = document.querySelector(".machine-bar");
     const dashboardContainer = document.querySelector(".dashboard-container"); // Changed to correct selector
@@ -226,7 +249,8 @@ async function eventClickDeocStnDashBoard(){
                     <button class ="catalog-button" id = "po2"> Posimat2 </button>
                     <button class ="catalog-button" id = "po2"> STN </button>
                     `;
-    
+
+    initDatePicker();
 }
 
 export function eventClickDeocStnDashBoardFull(){

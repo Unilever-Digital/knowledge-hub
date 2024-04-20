@@ -79,12 +79,14 @@ function activeClickTabDeoc(){
         eventHomeClick();
         unactiveAll();
         buttonGen();
-        const button_home = document.querySelector(".button.home");
-        button_home.classList.remove("unactive");
-        button_home.classList.add("active");
+        const button_home_2 = document.querySelector(".button.home");
+        button_home_2.classList.remove("unactive");
+        button_home_2.classList.add("active");
     });
 
     button_dec.addEventListener('click', () => {
+        const com = document.querySelector(".main-workspace-view-header");
+        com.innerHTML = "";
         eventClickDeoc();
         unactiveAll();
         buttonGen();
@@ -118,6 +120,8 @@ export function eventClickHomespace(){
     const button_deoc = document.querySelector(".deoc-button-home");
     button_deoc.addEventListener('click', () =>{
         eventClearWindown();
+        const com = document.querySelector(".main-workspace-view-header");
+        com.innerHTML = "";
         eventClickDeocStnDashBoardFull();
         activeClickTabDeoc();
     });
@@ -135,5 +139,9 @@ export function eventClickHomespace(){
     unactiveAll();
     buttonGen();
     const button_home_2 = document.querySelector(".button.home");
+    button_home_2.classList.remove("unactive");
     button_home_2.classList.add("active");
+
+    const com = document.querySelector(".main-workspace-view-header");
+    com.innerHTML = "";
 }
