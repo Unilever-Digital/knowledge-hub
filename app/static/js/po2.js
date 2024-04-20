@@ -200,7 +200,7 @@ async function createContainerInside() {
     return container_inside;
 }
 
-document.addEventListener("DOMContentLoaded", async function() {
+async function eventClickDeocStnDashBoard(){
     const dashboardContainer = document.querySelector(".dashboard-container"); // Changed to correct selector
     const chart = await createChartDashboard();
     const line = await createLineChartLineTrend();
@@ -221,4 +221,8 @@ document.addEventListener("DOMContentLoaded", async function() {
     dashboardContainer.appendChild(container_col1);
     dashboardContainer.appendChild(container_col2);
     dashboardContainer.appendChild(container_inside);
-});
+}
+
+export function eventClickDeocStnDashBoardFull(){
+    eventClickDeocStnDashBoard();
+}

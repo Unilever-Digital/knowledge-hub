@@ -1,4 +1,5 @@
-
+import {eventClickDeocStnDashBoardFull} from './po2.js';
+import {eventClickHomespace} from './home.js';
 
 const button_start = document.querySelector(".run-button");
 const button_end = document.querySelector(".stop-button");
@@ -80,9 +81,39 @@ function buttonGen(){
     });
 }
 
+function eventClearWindown() {
+    const workspace_win = document.querySelector(".dashboard-container");
+    workspace_win.innerHTML = "";
+}
+
+async function eventClickDeoc(){
+    eventClearWindown();
+    await eventClickDeocStnDashBoardFull();
+}
+
+async function eventHomeClick(){
+    eventClearWindown();
+    await eventClickHomespace();
+}
+
+function eventDatabaseClick(){
+    eventClearWindown();
+}
+
 document.addEventListener("DOMContentLoaded", function() {
     buttonGen();
     const header_workspace = document.querySelector(".workspace-header");
     header_workspace.appendChild(addDateTime());
     initDatePicker();
+    
+    const button_home = document.querySelector(".button.home");
+    const button_deoc = document.querySelector(".button.deoc");
+
+    button_home.addEventListener('click', () => {
+        eventHomeClick();
+    });
+
+    button_deoc.addEventListener('click',() => {
+        eventClickDeoc();
+    });
 });
