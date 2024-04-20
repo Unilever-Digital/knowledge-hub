@@ -199,12 +199,12 @@
         
         .button.active {
             color: #000000;
-            background-color: rgba(255, 255, 255, 0.1);
+            background-color: #ffffff;
         }
         
         .ability-button .button.active {
             color: #00339a;
-            background-color: rgba(255, 255, 255, 0.1);
+            background-color: #ffffff;
         }
         
         .dashboard {
