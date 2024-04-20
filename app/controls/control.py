@@ -242,6 +242,8 @@ def queryDataDeoc(start, end, table):
     }
     cursor = collection.find(query)
     return cursor
+
+
     
 
     
