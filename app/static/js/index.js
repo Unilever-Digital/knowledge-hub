@@ -70,6 +70,7 @@ function buttonGen(){
     buttons.forEach(button => {
         button.classList.add('unactive'); 
         button.addEventListener('click', () => {
+            unactiveAll();
             if (activeButton) {
                 activeButton.classList.add('unactive');
                 activeButton.classList.remove('active'); // Deactivate previous button
@@ -81,17 +82,18 @@ function buttonGen(){
     });
 }
 
+
 function eventClearWindown() {
     const workspace_win = document.querySelector(".dashboard-container");
     workspace_win.innerHTML = "";
 }
 
-async function eventClickDeoc(){
+export async function eventClickDeoc(){
     eventClearWindown();
     await eventClickDeocStnDashBoardFull();
 }
 
-async function eventHomeClick(){
+export async function eventHomeClick(){
     eventClearWindown();
     await eventClickHomespace();
 }
@@ -100,20 +102,23 @@ function eventDatabaseClick(){
     eventClearWindown();
 }
 
+function unactiveAll(){
+    const button_list = document.querySelectorAll(".button");
+    button_list.forEach(element => {
+        try{
+        element.classList.remove('active');
+        }
+        catch{}
+        try{
+            element.classList.remove('unactive');
+            element.classList.add('unactive'); 
+        }
+        catch{
+            element.classList.add('unactive'); 
+        }
+    });
+}
+
 document.addEventListener("DOMContentLoaded", function() {
-    buttonGen();
-    const header_workspace = document.querySelector(".workspace-header");
-    header_workspace.appendChild(addDateTime());
-    initDatePicker();
-    
-    const button_home = document.querySelector(".button.home");
-    const button_deoc = document.querySelector(".button.deoc");
-
-    button_home.addEventListener('click', () => {
-        eventHomeClick();
-    });
-
-    button_deoc.addEventListener('click',() => {
-        eventClickDeoc();
-    });
+    eventHomeClick();
 });

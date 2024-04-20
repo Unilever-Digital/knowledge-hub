@@ -201,6 +201,7 @@ async function createContainerInside() {
 }
 
 async function eventClickDeocStnDashBoard(){
+    const machine_bar = document.querySelector(".machine-bar");
     const dashboardContainer = document.querySelector(".dashboard-container"); // Changed to correct selector
     const chart = await createChartDashboard();
     const line = await createLineChartLineTrend();
@@ -221,6 +222,11 @@ async function eventClickDeocStnDashBoard(){
     dashboardContainer.appendChild(container_col1);
     dashboardContainer.appendChild(container_col2);
     dashboardContainer.appendChild(container_inside);
+    machine_bar.innerHTML = `
+                    <button class ="catalog-button" id = "po2"> Posimat2 </button>
+                    <button class ="catalog-button" id = "po2"> STN </button>
+                    `;
+    
 }
 
 export function eventClickDeocStnDashBoardFull(){
