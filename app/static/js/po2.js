@@ -249,7 +249,6 @@ async function eventClickDeocStnDashBoard(){
                     <button class ="catalog-button" id = "po2"> Posimat2 </button>
                     <button class ="catalog-button" id = "po2"> STN </button>
                     `;
-
     initDatePicker();
 }
 

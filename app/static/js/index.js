@@ -1,5 +1,6 @@
 import {eventClickDeocStnDashBoardFull} from './po2.js';
 import {eventClickHomespace} from './home.js';
+import {eventClickButtonSetting} from './setting.js';
 
 const button_start = document.querySelector(".run-button");
 const button_end = document.querySelector(".stop-button");
@@ -102,6 +103,10 @@ function eventDatabaseClick(){
     eventClearWindown();
 }
 
+function eventClickSetting(){
+    eventClickButtonSetting();
+}
+
 function unactiveAll(){
     const button_list = document.querySelectorAll(".button");
     button_list.forEach(element => {
@@ -124,4 +129,6 @@ document.addEventListener("DOMContentLoaded", function() {
     const date_time = addDateTime();
     commer.appendChild(date_time);
     eventHomeClick();
+    const button_setting = document.querySelector(".ability-button.user");
+    button_setting.addEventListener('click', eventClickSetting);
 });

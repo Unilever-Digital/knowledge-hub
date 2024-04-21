@@ -68,8 +68,8 @@ function activeClickTabDeoc(){
     button_bar.innerHTML = `
             <li><button class = "button home"> <i class="bi bi-grid-3x3-gap-fill"></i></button></li>
             <li><button class = "button deoc"> <i class="bi bi-display"></i></button></li>
-            <li><button class = "button database"> <i class="bi bi-app"></i></button></li>
-            <li class ="ability-button"><button class = "button"> <i class ="bi bi-person-fill-gear"></i></button></li> 
+            <li><button class = "button database"> <i class="bi bi-database"></i></button></li>
+            <li class ="ability-button user"><button class = "button"> <i class ="bi bi-person-fill-gear"></i></button></li> 
             <li class ="ability-button setting-button"><button class = "button"> <i class ="bi bi-gear"></i></button></li>
     `;
     const button_home = document.querySelector(".button.home");
@@ -105,13 +105,13 @@ export function eventClickHomespace(){
     const button_bar = document.querySelector(".button-bar");
     button_bar.innerHTML = `
             <li><button class = "button home"> <i class="bi bi-grid-3x3-gap-fill"></i></button></li>
-            <li class ="ability-button"><button class = "button"> <i class ="bi bi-person-fill-gear"></i></button></li> 
+            <li class ="ability-button user"><button class = "button"> <i class ="bi bi-person-fill-gear"></i></button></li> 
             <li class ="ability-button setting-button"><button class = "button"> <i class ="bi bi-gear"></i></button></li>
     `;
     const machine_bar = document.querySelector(".machine-bar");
     machine_bar.innerHTML = "";
     const workspace = document.querySelector(".dashboard-container");
-    var component = createComponent("DEOC Dashboad vision camera quality (Cap, Bottles,...)",
+    var component = createComponent("DEOC Dashboard",
         "deoc-button-home",
         "vision-cam.jpg");
     workspace.appendChild(component);

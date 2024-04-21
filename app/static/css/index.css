@@ -185,6 +185,18 @@
             transition: background-color 0.3s ease;
         }
         
+        .button-bar li.ability-button.user {
+            position: absolute;
+            bottom: 60px;
+            left: 0px;
+            top: auto;
+            border: none;
+            padding: 0px 0px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s ease;
+        }
+        
         li .button:hover {
             color: #000000;
         }
