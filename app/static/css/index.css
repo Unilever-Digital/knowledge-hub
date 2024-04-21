@@ -382,3 +382,14 @@
             background-color: #1f13c2;
             color: #ffffff;
         }
+        
+        .tab-setting {
+            position: fixed;
+            left: 70px;
+            bottom: 30px;
+        }
+        
+        .tab-setting button:hover {
+            background-color: #1f13c2;
+            color: #ffffff;
+        }

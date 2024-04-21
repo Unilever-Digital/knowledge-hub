@@ -9,7 +9,6 @@ export function eventClickButtonSetting(){
         `;
     eventcloseTab();
     var tabs = document.querySelector(".tab-setting");
-    tabs.style.display = "none";
     tabs.style.display = "block";
     return tab_setting;
 }
