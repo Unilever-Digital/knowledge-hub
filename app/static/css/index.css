@@ -370,3 +370,15 @@
             background-color: #2d12de;
             color: #ffffff;
         }
+        
+        .catalog-button {
+            background-color: #ffffff;
+            height: 30px;
+            width: 100px;
+            border-width: 0.5px;
+        }
+        
+        .catalog-button:hover {
+            background-color: #1f13c2;
+            color: #ffffff;
+        }
