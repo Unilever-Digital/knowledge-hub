@@ -148,7 +148,6 @@ async function createLineChartLineTrend() {
     return dashboard;
 }
 
-
 async function createLineChartSKUTrend() {
     const dashboard = document.createElement("div");
     dashboard.classList.add("dashboard");
