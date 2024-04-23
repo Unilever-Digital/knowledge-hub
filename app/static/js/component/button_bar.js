@@ -1,12 +1,21 @@
 import {eventClickDeocStnDashBoardFull} from '../hcl/po2.js';
 import {eventClickHCL} from '../catalog.js';
 import {eventClickButtonSetting} from './setting.js';
+import { eventInitCatalog } from '../home.js';
 
-function eventClearWindown() {
+export function eventClearWindown() {
     const workspace_win = document.querySelector(".dashboard-container");
     while(workspace_win.firstChild){
         workspace_win.removeChild(workspace_win.firstChild);
     }
+}
+
+function unactiveAll() {
+    const buttons = document.querySelectorAll('.button');
+    buttons.forEach(button => {
+        button.classList.add('unactive');
+        button.classList.remove('active');
+    });
 }
 
 export function eventClickDeoc(){
@@ -49,13 +58,21 @@ function buttonGen(){
 
 function eventCreateButton(li_class, button_class, class_icon){
     const li_button = document.createElement("li");
+
+
     const button = document.createElement("button");
     const button_icon = document.createElement("i");
 
     // add class list to compnent
-    button.classList.add(button_class);
-    button_icon.classList.add(class_icon);
-    li_button.classList.add(li_class);
+    button_class.forEach(element =>{
+        button.classList.add(element);
+    });
+    class_icon.forEach(element =>{
+        button_icon.classList.add(element);
+    });
+    li_class.forEach(element =>{
+        li_button.classList.add(element);
+    });
 
     button.appendChild(button_icon);
     li_button.appendChild(button);
@@ -67,13 +84,14 @@ export function eventCreateButtonBarHome(){
     while(button_bar.firstChild){
         button_bar.removeChild(button_bar.firstChild);
     }
-    const button_home = eventCreateButton("", "button home", "bi bi-grid-3x3-gap-fill");
-    const button_user = eventCreateButton("ability-button user", "button", "bi bi-person-fill-gear");
-    const button_setting = eventCreateButton("ability-button setting-button", "button", "bi bi-gear");
+    const button_home = eventCreateButton([], ["button", "home"], ["bi", "bi-grid-3x3-gap-fill"]);
+    const button_user = eventCreateButton(["ability-button", "user"], ["button"], ["bi", "bi-person-fill-gear"]);
+    const button_setting = eventCreateButton(["ability-button", "setting-button"], ["button"], ["bi", "bi-gear"]);
     
 
+
     button_home.addEventListener('click', ()=>{
-        eventHomeClick();
+        eventInitCatalog();
     });
 
     button_user.addEventListener('click', ()=>{
@@ -96,15 +114,17 @@ export function eventCreateButtonBarDEOC(){
     while(button_bar.firstChild){
         button_bar.removeChild(button_bar.firstChild);
     }
-    const button_home = eventCreateButton("", "button home", "bi bi-grid-3x3-gap-fill");
-    const button_deoc = eventCreateButton("", "button deoc", "bi bi-display");
-    const button_databse = eventCreateButton("", "button database", "bi bi-database");
-    const button_user = eventCreateButton("ability-button user", "button", "bi bi-person-fill-gear");
-    const button_setting = eventCreateButton("ability-button setting-button", "button", "bi bi-gear");
+
+    const button_home = eventCreateButton([], ["button", "home"], ["bi", "bi-grid-3x3-gap-fill"]);
+    const button_deoc = eventCreateButton([], ["button", "deoc"], ["bi", "bi-display"]);
+    const button_database = eventCreateButton([], ["button", "database"], ["bi", "bi-database"]);
+    const button_user = eventCreateButton(["ability-button", "user"], ["button"], ["bi", "bi-person-fill-gear"]);
+    const button_setting = eventCreateButton(["ability-button", "setting-button"], ["button"], ["bi", "bi-gear"]);
+
     
 
     button_home.addEventListener('click', ()=>{
-        eventHomeClick();
+        eventInitCatalog()
     });
     
 
@@ -125,6 +145,8 @@ export function eventCreateButtonBarDEOC(){
     });
 
     button_bar.appendChild(button_home);
+    button_bar.appendChild(button_deoc);
+    button_bar.appendChild(button_databse);
     button_bar.appendChild(button_user);
     button_bar.appendChild(button_setting);
     buttonGen();
