@@ -36,5 +36,9 @@ export function eventClickHCL(){
     const workspace = document.querySelector(".dashboard-container");
     var component = createComponent("DEOC Dashboard", "deoc-button-home", "vision-cam.jpg");
     workspace.appendChild(component);
+    const button_click_deoc = document.querySelector(".deoc-button-home");
+    button_click_deoc.addEventListener('click', ()=>{
+        eventClickDeocStnDashBoard();
+    });
     eventCreateButtonBarDEOC();
 }

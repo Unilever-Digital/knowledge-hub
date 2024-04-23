@@ -206,7 +206,6 @@ async function createContainerInside() {
 // Initialize the date picker
 
 export async function eventClickDeocStnDashBoard(){
-    const machine_bar = document.querySelector(".machine-bar");
     clearMachineBar();
     const dashboardContainer = document.querySelector(".dashboard-container"); // Changed to correct selector
     eventClearWindown();
