@@ -1,395 +1,418 @@
-        body {
-            position: fixed;
-            flex-direction: row;
-            margin-left: 0px;
-            margin-top: 0px;
-        }
-        
-        .main-space {
-            background-color: #f6f6f6;
-            position: fixed;
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-            width: 100%;
-            margin-left: 0px;
-        }
-        
-        .tab-bar-button {
-            margin-left: 0px;
-            height: 100%;
-            width: 60px;
-            background-color: #5d5d5d;
-        }
-        
-        .tab-bar-button button {
-            margin-top: 0px;
-            height: 60px;
-            width: 60px;
-            border: none;
-        }
-        
-        .tab-bar-button button i {
-            font-size: 26px;
-        }
-        
-        .workspace {
-            position: absolute;
-            margin-left: 60px;
-            height: 100%;
-            width: calc(100% -60px);
-            background-color: #f6f6f6;
-        }
-        
-        .workspace-header {
-            position: fixed;
-            top: 10px;
-            margin-left: 70px;
-            right: 10px;
-            min-width: calc(100% - 80px);
-            max-width: calc(100% - 80px);
-            display: flex;
-            height: 100px;
-            background-color: #ffffff;
-        }
-        
-        .workspace-header p {
-            position: absolute;
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 14px;
-            margin-left: 120px;
-            bottom: 0px;
-            margin-top: auto;
-            height: 50px;
-            width: 400px;
-            color: #000000;
-        }
-        
-        .machine-bar {
-            position: relative;
-            margin-left: 30%;
-            width: 200px;
-        }
-        
-        .datetime-component {
-            position: absolute;
-            font-family: Arial, Helvetica, sans-serif;
-            right: 20px;
-            bottom: 45px;
-            font-size: 14px;
-        }
-        
-        .datetime-component a {
-            overflow: auto;
-        }
-        
-        .header-icon {
-            visibility: visible;
-            height: 150px;
-            margin-top: 0px;
-            width: auto;
-            /* Maintain aspect ratio */
-        }
-        
-        .machine-bar {
-            width: 500px;
-            border-radius: 8px;
-            align-self: center;
-        }
-        
-        .main-workspace {
-            position: fixed;
-            display: flex;
-            flex-direction: row;
-            width: calc(100% - 10px - 70px);
-            margin-top: 120px;
-            background-color: #f6f6f6;
-        }
-        
-        .main-workspace-view-header {
-            position: absolute;
-            height: 30px;
-            right: 0px;
-            z-index: 100;
-        }
-        
-        .dashboard-container {
-            position: absolute;
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr;
-            top: 30px;
-            left: 20px;
-            right: 0px;
-            bottom: 60px;
-            width: calc(100% - 70px -10px);
-            height: calc(100% - 120px - 60px);
-            background-color: #ffffff;
-        }
-        
-        .component {
-            background-color: white;
-            border-color: #000000;
-            border-width: 1px;
-        }
-        
-        .footer {
-            background-color: #9e9d9d;
-            color: #fff;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            height: 25px;
-        }
-        
-        .footer p {
-            text-align: left;
-            margin-top: 5px;
-            margin-left: 5px;
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 14px;
-        }
-        
-        .button-bar {
-            list-style-type: none;
-            padding: 0 0;
-            margin-top: 0px;
-        }
-        
-        .button-bar ul {
-            position: absolute;
-            margin-top: 0px;
-        }
-        
-        .button-bar li {
-            margin-top: 0px;
-            display: inline;
-        }
-        
-        .button {
-            border: none;
-            padding: 0px 0px;
-            cursor: pointer;
-            font-size: 14px;
-            transition: background-color 0.3s ease;
-        }
-        
-        .button-bar li.ability-button.setting-button {
-            position: absolute;
-            bottom: 0px;
-            left: 0px;
-            top: auto;
-            border: none;
-            padding: 0px 0px;
-            cursor: pointer;
-            font-size: 14px;
-            transition: background-color 0.3s ease;
-        }
-        
-        .button-bar li.ability-button.user {
-            position: absolute;
-            bottom: 60px;
-            left: 0px;
-            top: auto;
-            border: none;
-            padding: 0px 0px;
-            cursor: pointer;
-            font-size: 14px;
-            transition: background-color 0.3s ease;
-        }
-        
-        li .button:hover {
-            color: #000000;
-        }
-        
-        .ability-button .button:hover {
-            color: #00339a;
-        }
-        
-        .button.unactive {
-            background-color: #5d5d5d;
-            color: #ffffff;
-        }
-        
-        .button.active {
-            color: #000000;
-            background-color: #ffffff;
-        }
-        
-        .ability-button .button.active {
-            color: #00339a;
-            background-color: #ffffff;
-        }
-        
-        .dashboard {
-            position: relative;
-            z-index: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            /* Adjust the height as needed */
-            border-width: 1px;
-            border-color: #000000;
-            max-width: 750px;
-            max-height: 400px;
-            background-color: #ffffff;
-        }
-        
-        #bar-chart-deoc-defect {
-            top: 50px;
-            width: 700px;
-            height: 300px;
-            margin-left: 0px;
-        }
-        
-        #line-chart-deoc {
-            top: 100px;
-            width: 700px;
-            height: 300px;
-            margin-left: 0px;
-        }
-        
-        #line-chart-line {
-            margin-top: 50px;
-            width: 500px;
-            height: 300px;
-        }
-        
-        #line-chart-sku {
-            top: 50px;
-            width: 500px;
-            height: 300px;
-        }
-        
-        .container-column1 {
-            grid-column: 1;
-            width: 710px;
-            height: 750px;
-            background-color: #ffffff;
-        }
-        
-        .container-column2 {
-            grid-column: 2;
-            width: 500px;
-            height: 750px;
-            background-color: #ffffff;
-        }
-        
-        .inside-container {
-            position: absolute;
-            top: 0px;
-            right: 0px;
-            height: 750px;
-            width: 350px;
-            border-width: 1px;
-            border-color: #000000;
-            grid-column: 3;
-            z-index: 10;
-            background-color: #ffffff;
-        }
-        
-        .inside-header {
-            position: absolute;
-            height: 30px;
-            width: 100%;
-            background-color: rgb(3, 3, 135);
-            color: #ffffff;
-            font-family: Arial, Helvetica, sans-serif;
-            text-align: center;
-            font-size: 14px;
-        }
-        
-        .inside-header-text {
-            margin-top: 5px;
-        }
-        /* Home */
-        
-        .component-container {
-            background-color: #ffffff;
-            border-radius: 10px;
-            height: 250px;
-            width: 450px;
-            margin-left: 50px;
-            margin-right: 50px;
-            border: #080808;
-            border-width: 1px;
-            box-shadow: #000000;
-        }
-        
-        .header-component {
-            position: relative;
-            height: 200px;
-            width: 450px;
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
-        
-        .header-component img {
-            border-top-left-radius: 10px;
-            border-top-right-radius: 10px;
-            width: 450px;
-            /* Set width to 100% to fill the container */
-            height: 200px;
-            /* Automatically calculate height to maintain aspect ratio */
-            object-fit: cover;
-        }
-        
-        .body-component {
-            position: absolute;
-            height: 50px;
-            width: 450px;
-            background-color: #ffffff;
-            border-bottom-left-radius: 10px;
-            border-bottom-right-radius: 10px;
-        }
-        
-        .body-component p {
-            position: absolute;
-            left: 10px;
-            top: 7px;
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 12px;
-        }
-        
-        .body-component button {
-            position: absolute;
-            margin-top: 10px;
-            right: 10px;
-            border-radius: 10px;
-            height: 30px;
-            width: 80px;
-            border-width: 0px;
-            background-color: #ffffff;
-            border-width: 2px;
-            border-color: #2d12de;
-            ;
-            box-shadow: #2d12de;
-        }
-        
-        .body-component button:hover {
-            background-color: #2d12de;
-            color: #ffffff;
-        }
-        
-        .catalog-button {
-            background-color: #ffffff;
-            height: 30px;
-            width: 100px;
-            border-width: 0.5px;
-        }
-        
-        .catalog-button:hover {
-            background-color: #1f13c2;
-            color: #ffffff;
-        }
-        
-        .tab-setting {
-            position: fixed;
-            left: 70px;
-            bottom: 30px;
-        }
-        
-        .tab-setting button:hover {
-            background-color: #1f13c2;
-            color: #ffffff;
-        }
+body {
+    position: fixed;
+    flex-direction: row;
+    margin-left: 0px;
+    margin-top: 0px;
+}
+
+.main-space {
+    background-color: #f6f6f6;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    margin-left: 0px;
+}
+
+.tab-bar-button {
+    margin-left: 0px;
+    height: 100%;
+    width: 60px;
+    background-color: #5d5d5d;
+}
+
+.tab-bar-button button {
+    margin-top: 0px;
+    height: 60px;
+    width: 60px;
+    border: none;
+}
+
+.tab-bar-button button i {
+    font-size: 26px;
+}
+
+.workspace {
+    position: absolute;
+    margin-left: 60px;
+    height: 100%;
+    width: calc(100% -60px);
+    background-color: #f6f6f6;
+}
+
+.workspace-header {
+    position: fixed;
+    top: 10px;
+    margin-left: 70px;
+    right: 10px;
+    min-width: calc(100% - 80px);
+    max-width: calc(100% - 80px);
+    display: flex;
+    height: 100px;
+    background-color: #ffffff;
+}
+
+.workspace-header p {
+    position: absolute;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    margin-left: 120px;
+    bottom: 0px;
+    margin-top: auto;
+    height: 50px;
+    width: 400px;
+    color: #000000;
+}
+
+.machine-bar {
+    position: relative;
+    margin-left: 30%;
+    width: 200px;
+}
+
+.datetime-component {
+    position: absolute;
+    font-family: Arial, Helvetica, sans-serif;
+    right: 20px;
+    bottom: 45px;
+    font-size: 14px;
+}
+
+.datetime-component a {
+    overflow: auto;
+}
+
+.header-icon {
+    visibility: visible;
+    height: 150px;
+    margin-top: 0px;
+    width: auto;
+    /* Maintain aspect ratio */
+}
+
+.machine-bar {
+    width: 500px;
+    border-radius: 8px;
+    align-self: center;
+}
+
+.main-workspace {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    width: calc(100% - 10px - 70px);
+    margin-top: 120px;
+    background-color: #f6f6f6;
+}
+
+.main-workspace-view-header {
+    position: absolute;
+    height: 30px;
+    right: 0px;
+    z-index: 100;
+}
+
+.dashboard-container {
+    position: absolute;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    top: 30px;
+    left: 20px;
+    right: 0px;
+    bottom: 60px;
+    width: calc(100% - 70px -10px);
+    height: calc(100% - 120px - 60px);
+    background-color: #ffffff;
+}
+
+.component {
+    background-color: white;
+    border-color: #000000;
+    border-width: 1px;
+}
+
+.footer {
+    background-color: #9e9d9d;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 25px;
+}
+
+.footer p {
+    text-align: left;
+    margin-top: 5px;
+    margin-left: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+.button-bar {
+    list-style-type: none;
+    padding: 0 0;
+    margin-top: 0px;
+}
+
+.button-bar ul {
+    position: absolute;
+    margin-top: 0px;
+}
+
+.button-bar li {
+    margin-top: 0px;
+    display: inline;
+}
+
+.button {
+    border: none;
+    padding: 0px 0px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.button-bar li.ability-button.setting-button {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    top: auto;
+    border: none;
+    padding: 0px 0px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.button-bar li.ability-button.user {
+    position: absolute;
+    bottom: 60px;
+    left: 0px;
+    top: auto;
+    border: none;
+    padding: 0px 0px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+li .button:hover {
+    color: #000000;
+}
+
+.ability-button .button:hover {
+    color: #00339a;
+}
+
+.button.unactive {
+    background-color: #5d5d5d;
+    color: #ffffff;
+}
+
+.button.active {
+    color: #000000;
+    background-color: #ffffff;
+}
+
+.ability-button .button.active {
+    color: #00339a;
+    background-color: #ffffff;
+}
+
+.dashboard {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Adjust the height as needed */
+    border-width: 1px;
+    border-color: #000000;
+    max-width: 750px;
+    max-height: 400px;
+    background-color: #ffffff;
+}
+
+#bar-chart-deoc-defect {
+    top: 50px;
+    width: 700px;
+    height: 300px;
+    margin-left: 0px;
+}
+
+#line-chart-deoc {
+    top: 100px;
+    width: 700px;
+    height: 300px;
+    margin-left: 0px;
+}
+
+#line-chart-line {
+    margin-top: 50px;
+    width: 500px;
+    height: 300px;
+}
+
+#line-chart-sku {
+    top: 50px;
+    width: 500px;
+    height: 300px;
+}
+
+.container-column1 {
+    grid-column: 1;
+    width: 710px;
+    height: 750px;
+    background-color: #ffffff;
+}
+
+.container-column2 {
+    grid-column: 2;
+    width: 500px;
+    height: 750px;
+    background-color: #ffffff;
+}
+
+.inside-container {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: 750px;
+    width: 350px;
+    border-width: 1px;
+    border-color: #000000;
+    grid-column: 3;
+    z-index: 10;
+    background-color: #ffffff;
+}
+
+.inside-header {
+    position: absolute;
+    height: 30px;
+    width: 100%;
+    background-color: rgb(3, 3, 135);
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 14px;
+}
+
+.inside-header-text {
+    margin-top: 5px;
+}
+
+
+/* Home */
+
+.component-container {
+    background-color: #ffffff;
+    border-radius: 10px;
+    height: 250px;
+    width: 450px;
+    margin-left: 50px;
+    margin-right: 50px;
+    border: #080808;
+    border-width: 1px;
+    box-shadow: #000000;
+}
+
+.header-component {
+    position: relative;
+    height: 200px;
+    width: 450px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.header-component img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 450px;
+    /* Set width to 100% to fill the container */
+    height: 200px;
+    /* Automatically calculate height to maintain aspect ratio */
+    object-fit: cover;
+}
+
+.body-component {
+    position: absolute;
+    height: 50px;
+    width: 450px;
+    background-color: #ffffff;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.body-component p {
+    position: absolute;
+    left: 10px;
+    top: 7px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+
+.body-component button {
+    position: absolute;
+    margin-top: 10px;
+    right: 10px;
+    border-radius: 10px;
+    height: 30px;
+    width: 80px;
+    border-width: 0px;
+    background-color: #ffffff;
+    border-width: 2px;
+    border-color: #2d12de;
+    ;
+    box-shadow: #2d12de;
+}
+
+.body-component button:hover {
+    background-color: #2d12de;
+    color: #ffffff;
+}
+
+.catalog-button {
+    background-color: #ffffff;
+    height: 30px;
+    width: 100px;
+    border-width: 0.5px;
+}
+
+.catalog-button:hover {
+    background-color: #1f13c2;
+    color: #ffffff;
+}
+
+.tab-setting {
+    position: fixed;
+    left: 70px;
+    bottom: 30px;
+}
+
+.tab-setting button:hover {
+    background-color: #1f13c2;
+    color: #ffffff;
+}
+
+.factory-catalog {
+    height: 400px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    width: 300px;
+}
+
+.factory-catalog-header {
+    text-align: center;
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    margin-top: 0px;
+}
+
+.factory-catalog-body {
+    position: relative;
+    height: 100px;
+    width: 300px;
+}
