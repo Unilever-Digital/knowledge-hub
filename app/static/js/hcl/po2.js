@@ -1,3 +1,7 @@
+import { eventClearWindown } from "../component/button_bar.js";
+import { initDatePicker } from "../component/datetime.js";
+import {clearMachineBar, initMachineBarPacking} from "../component/machine.js"
+
 async function createChartDashboard() {
     const dashboard = document.createElement("div");
     dashboard.classList.add("dashboard");
@@ -199,32 +203,13 @@ async function createContainerInside() {
     return container_inside;
 }
 
-// Function to create and style a date input element
-function createDateInput() {
-  const dateInput = document.createElement("input");
-  dateInput.type = "date";
-  dateInput.classList.add("date-picker");
-  return dateInput;
-}
-
-// Function to initialize the date picker and potentially add event listeners
-function initDatePicker() {
-  const datePicker = createDateInput();
-  const com = document.querySelector(".main-workspace-view-header");
-  com.appendChild(datePicker);
-
-  // (Optional) Add event listeners for date selection or other functionalities
-  datePicker.addEventListener("change", (event) => {
-    const selectedDate = event.target.value;
-    console.log("Selected Date:", selectedDate);
-  });
-}
-
 // Initialize the date picker
 
-async function eventClickDeocStnDashBoard(){
+export async function eventClickDeocStnDashBoard(){
     const machine_bar = document.querySelector(".machine-bar");
+    clearMachineBar();
     const dashboardContainer = document.querySelector(".dashboard-container"); // Changed to correct selector
+    eventClearWindown();
     const chart = await createChartDashboard();
     const line = await createLineChartLineTrend();
     const deoc = await createLineChartDEOCTrend();
@@ -244,13 +229,9 @@ async function eventClickDeocStnDashBoard(){
     dashboardContainer.appendChild(container_col1);
     dashboardContainer.appendChild(container_col2);
     dashboardContainer.appendChild(container_inside);
-    machine_bar.innerHTML = `
-                    <button class ="catalog-button" id = "po2"> Posimat2 </button>
-                    <button class ="catalog-button" id = "po2"> STN </button>
-                    `;
+
+    initMachineBarPacking();
     initDatePicker();
 }
 
-export function eventClickDeocStnDashBoardFull(){
-    eventClickDeocStnDashBoard();
-}
+

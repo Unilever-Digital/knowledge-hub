@@ -1,4 +1,4 @@
-import {eventClickDeocStnDashBoardFull} from '../hcl/po2.js';
+import {eventClickDeocStnDashBoard} from '../hcl/po2.js';
 import {eventClickHCL} from '../catalog.js';
 import {eventClickButtonSetting} from './setting.js';
 import { eventInitCatalog } from '../home.js';
@@ -20,7 +20,7 @@ function unactiveAll() {
 
 export function eventClickDeoc(){
     eventClearWindown();
-    eventClickDeocStnDashBoardFull();
+    eventClickDeocStnDashBoard();
 }
 
 export function eventHomeClick(){
@@ -108,7 +108,6 @@ export function eventCreateButtonBarHome(){
     buttonGen();
 }
 
-
 export function eventCreateButtonBarDEOC(){
     const button_bar = document.querySelector(".button-bar");
     while(button_bar.firstChild){
@@ -120,8 +119,6 @@ export function eventCreateButtonBarDEOC(){
     const button_database = eventCreateButton([], ["button", "database"], ["bi", "bi-database"]);
     const button_user = eventCreateButton(["ability-button", "user"], ["button"], ["bi", "bi-person-fill-gear"]);
     const button_setting = eventCreateButton(["ability-button", "setting-button"], ["button"], ["bi", "bi-gear"]);
-
-    
 
     button_home.addEventListener('click', ()=>{
         eventInitCatalog()
@@ -146,7 +143,7 @@ export function eventCreateButtonBarDEOC(){
 
     button_bar.appendChild(button_home);
     button_bar.appendChild(button_deoc);
-    button_bar.appendChild(button_databse);
+    button_bar.appendChild(button_database);
     button_bar.appendChild(button_user);
     button_bar.appendChild(button_setting);
     buttonGen();
