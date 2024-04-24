@@ -1,6 +1,6 @@
-import { eventClearWindown, eventCreateButtonBarDEOC } from "../component/button_bar.js";
-import { initDatePicker } from "../component/datetime.js";
-import {clearMachineBar, initMachineBarPacking} from "../component/machine.js"
+import { eventClearWindown, eventCreateButtonBarDEOC } from "../../component/button_bar.js";
+import { initDatePicker } from "../../component/datetime.js";
+import {clearMachineBar, initMachineBarPacking} from "../../component/machine.js"
 
 async function createChartDashboard() {
     const dashboard = document.createElement("div");

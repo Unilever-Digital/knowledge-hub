@@ -1,4 +1,4 @@
-import {eventClickDeocStnDashBoard} from './hcl/po2.js';
+import {eventClickDeocStnDashBoard} from './hcl/deoc/po2.js';
 import {eventClickDeoc, eventCreateButtonBarDEOC, eventCreateButtonBarHome } from './component/button_bar.js';
 import {eventClearWindown} from './component/button_bar.js'
 import {clearDatePicker } from './component/datetime.js';

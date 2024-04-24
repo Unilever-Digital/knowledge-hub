@@ -1,4 +1,4 @@
-import {eventClickDeocStnDashBoard} from '../hcl/po2.js';
+import {eventClickDeocStnDashBoard} from '../hcl/deoc/po2.js';
 import {eventClickHCL} from '../catalog.js';
 import {eventClickButtonSetting} from './setting.js';
 import { eventInitCatalog } from '../home.js';
