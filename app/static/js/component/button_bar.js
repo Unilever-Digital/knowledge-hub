@@ -5,8 +5,12 @@ import { eventInitCatalog } from '../home.js';
 
 export function eventClearWindown() {
     const workspace_win = document.querySelector(".dashboard-container");
+    const workspace_body = document.querySelector(".main-workspace-body");
     while(workspace_win.firstChild){
         workspace_win.removeChild(workspace_win.firstChild);
+    }
+    while(workspace_body.firstChild){
+        workspace_body.removeChild(workspace_body.firstChild);
     }
 }
 
@@ -58,7 +62,6 @@ function buttonGen(){
 
 function eventCreateButton(li_class, button_class, class_icon){
     const li_button = document.createElement("li");
-
 
     const button = document.createElement("button");
     const button_icon = document.createElement("i");

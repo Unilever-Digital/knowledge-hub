@@ -398,31 +398,51 @@ li .button:hover {
 
 .factory-catalog {
     display: flexbox;
-    height: 250px;
-    background-color: #ffffff;
+    height: 200px;
     border-radius: 0px;
     width: 300px;
+    background-color: #ffffff;
 }
 
 .factory-catalog-header {
-    align-self: center;
     position: absolute;
-    height: 200px;
+    height: 195px;
     width: 300px;
-    margin-top: 0px;
+    top: 10px;
+    background-color: #ffffff;
 }
 
 .factory-catalog-body {
     position: absolute;
-    margin-top: 295px;
+    margin-top: 195px;
     height: 5px;
     width: 300px;
     background-color: #2d12de;
 }
 
-.factory-catalog button {
+.factory-catalog-header button {
+    position: absolute;
     background-color: #ffffff;
     height: 30px;
     width: 100px;
+    top: 10px;
+    right: 10px;
     border-width: 0.5px;
+}
+
+.factory-catalog button:hover {
+    background-color: #2d12de;
+}
+
+.main-workspace-body {
+    position: absolute;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    top: 30px;
+    left: 20px;
+    right: 0px;
+    bottom: 60px;
+    width: calc(100% - 70px -10px);
+    height: calc(100% - 120px - 60px);
+    background-color: #ffffff;
 }

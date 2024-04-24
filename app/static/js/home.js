@@ -9,12 +9,14 @@ function factoryCatalog(class_, name, func){
     const component_catalog_header = document.createElement("div");
     component_catalog_header.innerHTML = `<i class="bi bi-buildings"></i> <p> ${name} </p>`;
     const component_catalog_body = document.createElement("div");
+    component_catalog_header.classList.add("factory-catalog-header");
+    component_catalog_body.classList.add("factory-catalog-body");
     component_catalog.classList.add(class_);
 
     const button = document.createElement("button");
     button.addEventListener('click', func);
 
-    component_catalog_body.appendChild(button);
+    component_catalog_header.appendChild(button);
     component_catalog.appendChild(component_catalog_header);
     component_catalog.appendChild(component_catalog_body);
 
@@ -26,7 +28,7 @@ export function eventInitCatalog(){
     clearDatePicker();
     clearMachineBar();
 
-    const workspace = document.querySelector(".dashboard-container");
+    const workspace = document.querySelector(".main-workspace-body");
     const hcl = factoryCatalog("factory-catalog", "HCL", eventClickHCL);
     const pcl = factoryCatalog("factory-catalog", "PCL");
     const oral = factoryCatalog("factory-catalog", "ORAL");
