@@ -1,4 +1,4 @@
-import { eventClearWindown } from "../component/button_bar.js";
+import { eventClearWindown, eventCreateButtonBarDEOC } from "../component/button_bar.js";
 import { initDatePicker } from "../component/datetime.js";
 import {clearMachineBar, initMachineBarPacking} from "../component/machine.js"
 
@@ -231,6 +231,7 @@ export async function eventClickDeocStnDashBoard(){
 
     initMachineBarPacking();
     initDatePicker();
+    eventCreateButtonBarDEOC();
 }
 
 

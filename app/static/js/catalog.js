@@ -1,5 +1,5 @@
 import {eventClickDeocStnDashBoard} from './hcl/po2.js';
-import {eventClickDeoc, eventCreateButtonBarDEOC } from './component/button_bar.js';
+import {eventClickDeoc, eventCreateButtonBarDEOC, eventCreateButtonBarHome } from './component/button_bar.js';
 import {eventClearWindown} from './component/button_bar.js'
 import {clearDatePicker } from './component/datetime.js';
 import { clearMachineBar } from './component/machine.js';
@@ -40,5 +40,5 @@ export function eventClickHCL(){
     button_click_deoc.addEventListener('click', ()=>{
         eventClickDeocStnDashBoard();
     });
-    eventCreateButtonBarDEOC();
+    eventCreateButtonBarHome();
 }
