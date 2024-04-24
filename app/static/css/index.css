@@ -318,6 +318,7 @@ li .button:hover {
 }
 
 .header-component {
+    text-align: center;
     position: relative;
     height: 200px;
     width: 450px;
@@ -399,12 +400,12 @@ li .button:hover {
     display: flexbox;
     height: 250px;
     background-color: #ffffff;
-    border-radius: 10px;
+    border-radius: 0px;
     width: 300px;
 }
 
 .factory-catalog-header {
-    text-align: center;
+    align-self: center;
     position: absolute;
     height: 200px;
     width: 300px;
@@ -412,9 +413,11 @@ li .button:hover {
 }
 
 .factory-catalog-body {
-    position: relative;
-    height: 50px;
+    position: absolute;
+    margin-top: 295px;
+    height: 5px;
     width: 300px;
+    background-color: #2d12de;
 }
 
 .factory-catalog button {
