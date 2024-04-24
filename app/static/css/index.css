@@ -405,11 +405,36 @@ li .button:hover {
 }
 
 .factory-catalog-header {
+    text-align: center;
     position: absolute;
     height: 195px;
     width: 300px;
-    top: 10px;
+    top: 0px;
     background-color: #ffffff;
+}
+
+.factory-catalog-header img {
+    position: absolute;
+    top: 30px;
+    left: 10%;
+}
+
+.factory-catalog-header p {
+    position: relative;
+    top: 64px;
+    left: 0px;
+}
+
+.factory-catalog-header .catalog-note {
+    display: flex;
+    position: relative;
+    left: 50px;
+    font-size: 14px;
+}
+
+.catalog-img {
+    height: 70px;
+    width: auto;
 }
 
 .factory-catalog-body {
@@ -425,13 +450,13 @@ li .button:hover {
     background-color: #ffffff;
     height: 30px;
     width: 100px;
-    top: 10px;
+    bottom: 20px;
     right: 10px;
-    border-width: 0.5px;
 }
 
-.factory-catalog button:hover {
+.factory-catalog-header button:hover {
     background-color: #2d12de;
+    color: #ffffff;
 }
 
 .main-workspace-body {
