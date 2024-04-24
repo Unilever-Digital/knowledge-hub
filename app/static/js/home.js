@@ -13,6 +13,7 @@ function factoryCatalog(class_, name, func){
 
     const button = document.createElement("button");
     button.addEventListener('click', func);
+    
     component_catalog_body.appendChild(button);
     component_catalog.appendChild(component_catalog_header);
     component_catalog.appendChild(component_catalog_body);

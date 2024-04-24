@@ -397,7 +397,7 @@ li .button:hover {
 }
 
 .factory-catalog {
-    display: block;
+    display: flexbox;
     height: 250px;
     background-color: #ffffff;
     border-radius: 10px;
