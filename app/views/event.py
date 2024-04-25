@@ -9,10 +9,7 @@ from app.controls.control import *
 from app.utils.function import *
 import schedule
 import time
-import signal
 import threading
-import os
-from app import terminate_thread
 
 
 # Import other necessary modules (dbmodel, control, etc.)

@@ -7,7 +7,7 @@ body {
 }
 
 .main-space {
-    background-color: #f6f6f6;
+    background-color: #f0f0f0;
     position: fixed;
     display: flex;
     flex-direction: column;
@@ -104,7 +104,7 @@ body {
     flex-direction: row;
     width: calc(100% - 10px - 70px);
     margin-top: 120px;
-    background-color: #f6f6f6;
+    background-color: #e8e8e8;
 }
 
 .main-workspace-view-header {
@@ -522,21 +522,21 @@ li .button:hover {
 
 .chat-entry {
     resize: none;
-    border-radius: 10px;
+    border-radius: 8px;
     border-width: 1px;
     border: #ffffff;
     border-style: solid;
     position: static;
-    height: 35px;
-    max-width: 95%;
-    min-width: 93%;
-    left: 10px;
-    right: 10px;
+    height: 33px;
+    min-width: 90%;
+    margin-left: 10px;
+    margin-right: 10px;
     margin-top: 10%;
     margin-bottom: 3%;
     background-color: #ffffff;
     font-size: 12px;
     padding-left: 5px;
+    padding-top: 5px;
 }
 
 .chat-entry ::after {
