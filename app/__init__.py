@@ -6,17 +6,7 @@ from flask import (
     render_template
 )
 import os
-import threading
 
-terminate_thread = True
-thread_lock = threading.Lock()
-
-def handle_exit(signum, frame):
-    global terminate_thread
-    print("Exiting...")
-    with thread_lock:
-        terminate_thread = True
-    os._exit(0)
     
 def create_app(test_config=None):
     """ app init
