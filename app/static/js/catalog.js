@@ -3,6 +3,7 @@ import {eventClickDeoc, eventCreateButtonBarDEOC, eventCreateButtonBarHome } fro
 import {eventClearWindown} from './component/button_bar.js'
 import {clearDatePicker } from './component/datetime.js';
 import { clearMachineBar } from './component/machine.js';
+import { eventClickDeocMas140DashBoard } from './pcl/deoc/mas140.js';
 
 
 function createComponent(content, id, image) {
@@ -39,6 +40,22 @@ export function eventClickHCL(){
     const button_click_deoc = document.querySelector(".deoc-button-home");
     button_click_deoc.addEventListener('click', ()=>{
         eventClickDeocStnDashBoard();
+    });
+    eventCreateButtonBarHome();
+}
+
+export function eventClickPCL(){
+    eventClearWindown();
+    clearDatePicker();
+    clearMachineBar();
+    const machine_bar = document.querySelector(".machine-bar");
+    machine_bar.innerHTML = "";
+    const workspace = document.querySelector(".dashboard-container");
+    var component = createComponent("DEOC Dashboard", "deoc-button-home", "vision-cam.jpg");
+    workspace.appendChild(component);
+    const button_click_deoc = document.querySelector(".deoc-button-home");
+    button_click_deoc.addEventListener('click', ()=>{
+        eventClickDeocMas140DashBoard();
     });
     eventCreateButtonBarHome();
 }

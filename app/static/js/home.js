@@ -3,6 +3,7 @@ import { eventClearWindown } from "./component/button_bar.js";
 import { clearDatePicker } from "./component/datetime.js";
 import { clearMachineBar } from "./component/machine.js";
 import { eventCreateButtonBarHome } from "./component/button_bar.js";
+import { eventClickDeocPCL } from "./pcl/component/button_bar.js";
 
 function factoryCatalog(class_, name, func){
     const component_catalog = document.createElement("div");
@@ -31,7 +32,7 @@ export function eventInitCatalog(){
 
     const workspace = document.querySelector(".main-workspace-body");
     const hcl = factoryCatalog("factory-catalog", "HCL", eventClickHCL);
-    const pcl = factoryCatalog("factory-catalog", "PCL");
+    const pcl = factoryCatalog("factory-catalog", "PCL", eventClickPCL);
     const oral = factoryCatalog("factory-catalog", "ORAL");
 
     while(workspace.firstChild){

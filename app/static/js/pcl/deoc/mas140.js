@@ -1,6 +1,6 @@
-import { eventClearWindown, eventCreateButtonBarDEOC } from "../../component/button_bar.js";
+import { eventClearWindown, eventCreateButtonBarDEOCPCL} from "../../pcl/component/machine.js"
 import { initDatePicker } from "../../component/datetime.js";
-import {clearMachineBar, initMachineBarPacking} from "../../component/machine.js"
+import { clearMachineBar} from "../../component/machine.js"
 
 async function createChartDashboard() {
     const dashboard = document.createElement("div");
@@ -21,7 +21,7 @@ async function createChartDashboard() {
             labels: ['Counter of Bottles', 'Cap', 'Carton'],
             datasets: [{
                 label: 'DEOC Top Defect (pcs/cs)',
-                data: [12, 19, 3,],
+                data: [12, 19, 3],
                 backgroundColor: [
                     'rgba(255, 99, 132, 0.2)',
                     'rgba(54, 162, 235, 0.2)',
@@ -200,7 +200,7 @@ async function createContainerInside() {
 
 // Initialize the date picker
 
-export async function eventClickDeocStnDashBoard(){
+export async function eventClickDeocMas140DashBoard(){
     clearMachineBar();
     const dashboardContainer = document.querySelector(".dashboard-container"); // Changed to correct selector
     eventClearWindown();
@@ -226,7 +226,7 @@ export async function eventClickDeocStnDashBoard(){
 
     initMachineBarPacking();
     initDatePicker();
-    eventCreateButtonBarDEOC();
+    eventCreateButtonBarDEOCPCL();
 }
 
 
