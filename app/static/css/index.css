@@ -558,7 +558,16 @@ li .button:hover {
     border: #000000;
     display: flex;
     justify-content: flex-end;
+    font-weight: 100;
     box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+}
+
+.chat-button-bar button i {
+    margin-top: 0px;
+    position: relative;
+    font-size: 11px;
+    object-fit: fill;
+    color: #000000;
 }
 
 .btn {
@@ -567,7 +576,7 @@ li .button:hover {
 }
 
 .chat-button-openbutton {
-    font-size: 26px;
+    text-align: center;
     border-radius: 8px;
     margin-top: 8px;
     margin-left: 3px;
@@ -575,14 +584,14 @@ li .button:hover {
     padding: 0px;
     width: 16px;
     height: 16px;
-    background-color: rgb(198, 145, 12);
+    background-color: rgb(231, 159, 13);
     color: #ffffff;
     position: static;
-    font-size: 10px;
     border-width: 0px;
 }
 
 .chat-button-closebutton {
+    text-align: center;
     border-radius: 8px;
     margin-top: 8px;
     margin-left: 3px;
@@ -593,12 +602,12 @@ li .button:hover {
     background-color: rgb(217, 26, 26);
     color: #ffffff;
     position: static;
-    font-size: 10px;
     border-width: 0px;
     text-rendering: geometricPrecision;
 }
 
 .chat-button-fullscreen {
+    text-align: center;
     border-radius: 8px;
     margin-top: 8px;
     margin-left: 3px;
@@ -609,7 +618,6 @@ li .button:hover {
     background-color: rgb(11, 237, 22);
     color: #ffffff;
     position: static;
-    font-size: 8px;
     border-width: 0px;
 }
 
