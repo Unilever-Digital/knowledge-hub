@@ -7,7 +7,6 @@ from flask import (
 )
 import os
 import threading
-import signal
 
 terminate_thread = True
 thread_lock = threading.Lock()
@@ -56,8 +55,5 @@ def create_app(test_config=None):
     @app.route('/login')
     def main():
         return redirect(url_for('blue_print.login'))
-    
-    signal.signal(signal.SIGTERM, handle_exit)
-    signal.signal(signal.SIGINT, handle_exit)
     
     return app
