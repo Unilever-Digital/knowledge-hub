@@ -172,10 +172,62 @@ async function sendMessage() {
     }
 }
 
-sendBtn.addEventListener("click", sendMessage);
 messageInput.addEventListener("keydown", event => {
     if (event.keyCode === 13 && !event.shiftKey) {
         event.preventDefault();
         sendMessage();
     }
+});
+
+function changeHeightClose() {
+    const box = document.querySelector(".chat-box-container");
+    const chat_entry = document.querySelector(".chat-entry");
+    const button_box = document.querySelector(".chat-button-bar");
+    const chatbox = document.querySelector(".chat-box");
+    // Check the current height and toggle between 400px and 25px
+    // Check the current height and toggle between 400px and 25px
+    box.style.height = "33px";
+    box.style.width = "350px";
+    chat_entry.style.visibility = "hidden";
+    chatbox.style.visibility ="hidden";
+    button_box.style.borderBottomRightRadius = "12px";
+    button_box.style.borderBottomLeftRadius = "12px";
+}
+
+function changeHeightOpen() {
+    const box = document.querySelector(".chat-box-container");
+    const button_box = document.querySelector(".chat-button-bar");
+    const chat_entry = document.querySelector(".chat-entry");
+    const chatbox = document.querySelector(".chat-box");
+    // Check the current height and toggle between 400px and 25px
+    box.style.height = "500px";
+    box.style.width = "350px";
+    chat_entry.style.height = "35px";
+    button_box.style.borderBottomRightRadius = "0px";
+    button_box.style.borderBottomLeftRadius = "0px";
+    chat_entry.style.visibility = "visible";
+    chatbox.style.visibility = "visible";
+    chat_entry.style.marginTop = "10%"
+}
+
+function changeHeightFullScreen() {
+    const box = document.querySelector(".chat-box-container");
+    const button_box = document.querySelector(".chat-button-bar");
+    const chat_entry = document.querySelector(".chat-entry");
+    // Check the current height and toggle between 400px and 25px
+    box.style.height = "800px";
+    box.style.width = "600px";
+    chat_entry.style.height = "35px";
+    button_box.style.borderBottomRightRadius = "0px";
+    button_box.style.borderBottomLeftRadius = "0px";
+    chat_entry.style.visibility = "visible";
+    chat_entry.style.marginTop = "50%"
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    const clickHeightOpen = document.querySelector(".chat-button-openbutton");
+    const clickHeightClose = document.querySelector(".chat-button-closebutton");
+
+    clickHeightClose.addEventListener("click", changeHeightClose);
+    clickHeightOpen.addEventListener("click", changeHeightOpen);
 });

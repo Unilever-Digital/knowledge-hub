@@ -41,27 +41,27 @@
         <div class = "chat-box-container">
             <div class = "chat-button-bar">
                 <p class = "bot-label"> Unipilot </p>
-                <button class="chat-button-fullscreen" onclick="changeHeightFullScreen()'">
+                <button class="chat-button-fullscreen" >
                     <i class="bi bi-arrows-fullscreen"></i>
                 </button>
-                <button class = "chat-button-openbutton" onclick="changeHeightOpen()">
+                <button class = "chat-button-openbutton" >
                     <i class="bi bi-plus-circle"></i>
                 </button>
-                <button class = "chat-button-closebutton" onclick="changeHeightClose()">
+                <button class = "chat-button-closebutton">
                     <i class="bi bi-dash-circle"></i>
                 </button>
             </div>
             <div class = "chat-box">
             </div>
             <form action = "/ecommerce", method = POST>
-                    <textarea class ="chat-entry" rows="1" placeholder="Chat" id="message-input" name ="chat"></textarea>
+                <textarea class ="chat-entry" rows="1" placeholder="Chat" id="message-input" name ="chat"></textarea>
             </form>
-            <button type="button" class="btn" id="send-btn"></button>
         </div>
     </div>
     <script type="module" src="static/js/hcl/po2.js"></script>
     <script type="module" src="static/js/component/setting.js"></script>
     <script type="module" src="static/js/component/button_bar.js"></script>
+    <script type="module" src="static/js/component/chatbot.js"></script>
     <script type="module" src ="static/js/home.js"></script>
     <script type="module" src ="static/js/catalog.js"></script>
     <script type="module" src="static/js/index.js"></script>

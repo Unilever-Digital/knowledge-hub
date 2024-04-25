@@ -545,7 +545,8 @@ li .button:hover {
 }
 
 .chat-button-bar {
-    height: 33px;
+    height: 35px;
+    min-width: 35px;
     width: 100%;
     position: static;
     margin-top: 0px;
@@ -558,11 +559,11 @@ li .button:hover {
     display: flex;
     justify-content: flex-end;
     box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
-    text-align: center;
 }
 
 .btn {
     visibility: hidden;
+    height: 0px;
 }
 
 .chat-button-openbutton {
