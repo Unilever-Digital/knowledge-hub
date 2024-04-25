@@ -11,17 +11,18 @@ from app.utils.function import *
 pcl = Blueprint("pcl", __name__)
 
 
-@pcl.route("/deoc_trend_pcl")
+@pcl.route("/deoc_trend_pcl", method = "POST")
 def deoc_trend_pcl():
+        
     pass
 
 
-@pcl.route("/deoc_line_trend_pcl")
+@pcl.route("/deoc_line_trend_pcl", method="POST")
 def deoc_line_trend_pcl():
     pass
 
 
-@pcl.route("/deoc_sku_trend_pcl")
+@pcl.route("/deoc_sku_trend_pcl",  method="POST")
 def deoc_sku_trend_pcl():
     pass
 
