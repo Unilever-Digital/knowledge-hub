@@ -2,18 +2,22 @@ from flask import (
     Blueprint,
     render_template,
     request,
-    jsonify
+    jsonify,
+    url_for,
+    redirect
 )
 from app.models.dbmodel import *
 from app.controls.control import *
 from app.utils.function import *
+from app.views.event import *
 
-blog = Blueprint("blog", __name__)
+blue_print = Blueprint("blue_print", __name__)
 
 
-#@blog.route("/qltdata/table_imagefail_datecode/push")
-# def table_imagefail_datecode_push():
-#    columns = getColumns("Table_ImageFail_DateCode")
- #   tableToAppEngineSTN("DESKTOP-DGEHS9H",
-  #                      "U-CheckDate-Barcode", "Table_ImageFail_DateCode", columns)
+@blue_print.route("/login", methods=["POST", "GET"])
+def login():
+    if request.method == "POST":
+        if request.form.get('button') == "login":
+            return redirect(url_for('event.home'))
+    return render_template("login.html")
 

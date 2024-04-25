@@ -1,7 +1,7 @@
-$p: hsl(213deg 85% 97%);
-$s: hsl(233deg 36% 38%);
+$p: hsl(213deg, 85%, 97%);
+$s: hsl(233deg, 36%, 38%);
 * {
-    font-family: 'Poppins'
+    font-family: 'Poppins';
 }
 
 @mixin screen {
@@ -10,7 +10,7 @@ $s: hsl(233deg 36% 38%);
     display: flex;
     flex-direction: column;
     border-radius: 30px;
-    box-shadow: 0 0 2em hsl(231deg 62% 94%);
+    box-shadow: 0 0 2em hsl(231deg, 62%, 94%);
 }
 
 body {
@@ -19,59 +19,42 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: hsl(218deg 50% 91%);
+    background: hsl(218deg, 50%, 91%);
     height: 100vh;
 }
 
 .screen-1 {
     @include screen;
-    gap: 2em;
+    gap: 1em;
     .logo {
-        margin-top: -3em
+        margin-top: -1em;
+        margin-bottom: -5em;
+        margin-left: 1em;
+        margin-right: -1em;
     }
-    .email {
-        background: hsl(0deg 0% 100%);
-        box-shadow: 0 0 2em hsl(231deg 62% 94%);
-        padding: 1em;
-        display: flex;
-        flex-direction: column;
-        gap: 0.5em;
-        border-radius: 20px;
-        color: hsl(0deg 0% 30%);
-        margin-top: -3em;
-        input {
-            outline: none;
-            border: none;
-            &::placeholder {
-                color: hsl(0deg 0% 0%);
-                font-size: 0.9em;
-            }
-        }
-        ion-icon {
-            color: hsl(0deg 0% 30%);
-            margin-bottom: -.2em;
-        }
-    }
+    .email,
     .password {
-        background: hsl(0deg 0% 100%);
-        box-shadow: 0 0 2em hsl(231deg 62% 94%);
+        margin-top: 1em;
+        /* Add margin between email and password fields */
+        background: hsl(0deg, 0%, 100%);
+        box-shadow: 0 0 2em hsl(231deg, 62%, 94%);
         padding: 1em;
         display: flex;
         flex-direction: column;
         gap: 0.5em;
         border-radius: 20px;
-        color: hsl(0deg 0% 30%);
+        color: hsl(0deg, 0%, 30%);
         input {
             outline: none;
             border: none;
             &::placeholder {
-                color: hsl(0deg 0% 0%);
+                color: hsl(0deg, 0%, 0%);
                 font-size: 0.9em;
             }
         }
         ion-icon {
-            color: hsl(0deg 0% 30%);
-            margin-bottom: -.2em;
+            color: hsl(0deg, 0%, 30%);
+            margin-bottom: -0.2em;
         }
         .show-hide {
             margin-right: -5em;
@@ -79,24 +62,46 @@ body {
     }
     .login {
         padding: 1em;
-        background: hsl(233deg 36% 38%);
-        color: hsl(0 0 100);
+        background: hsl(233deg, 36%, 38%);
+        color: hsl(0, 0, 100);
         border: none;
         border-radius: 30px;
         font-weight: 600;
+        margin-left: 50px;
     }
     .footer {
         display: flex;
         font-size: 0.7em;
-        color: hsl(0deg 0% 37%);
+        color: hsl(0deg, 0%, 37%);
         gap: 14em;
         padding-bottom: 10em;
         span {
-            cursor: pointer
+            cursor: pointer;
         }
     }
 }
 
 button {
     cursor: pointer;
+}
+
+.login-button {
+    margin-top: 2em;
+    text-align: center;
+    width: 100px;
+    left: 12em;
+    bottom: 1em;
+    position: relative;
+    border-width: 0.5px;
+    border: #f3f3f3;
+    border-top-width: 0px;
+    border-left-width: 0px;
+    background-color: rgb(246, 247, 255);
+    font-weight: 500;
+    border-radius: 8px;
+}
+
+.login-button:hover {
+    background-color: rgb(3, 37, 205);
+    color: #ffffff;
 }

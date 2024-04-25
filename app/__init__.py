@@ -41,9 +41,9 @@ def create_app(test_config=None):
                                 CACHE_THRESHOLD=100000,)
     else:
         app.config.from_mapping(test_config)
-    from .views.view import blog
+    from .views.view import blue_print
     from .views.event import event
-    app.register_blueprint(blog)
+    app.register_blueprint(blue_print)
     app.register_blueprint(event)
 
     from .models.dbmodel import db
@@ -54,9 +54,9 @@ def create_app(test_config=None):
     except OSError:
         pass
 
-    @app.route('/deoc-hcl-home')
+    @app.route('/login')
     def main():
-        return redirect(url_for('event.home'))
+        return redirect(url_for('blue_print.login'))
     
     signal.signal(signal.SIGTERM, handle_exit)
     signal.signal(signal.SIGINT, handle_exit)
