@@ -13,7 +13,7 @@ pcl = Blueprint("pcl", __name__)
 
 @pcl.route("/deoc_trend_pcl", method = "POST")
 def deoc_trend_pcl():
-        
+    
     pass
 
 
