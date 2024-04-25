@@ -1,6 +1,6 @@
-import { eventClearWindown, eventCreateButtonBarDEOCPCL} from "../../pcl/component/machine.js"
 import { initDatePicker } from "../../component/datetime.js";
 import { clearMachineBar} from "../../component/machine.js"
+import {eventCreateButtonBarDEOCPCL, eventClearWindown} from "../../pcl/component/button_bar.js"
 
 async function createChartDashboard() {
     const dashboard = document.createElement("div");

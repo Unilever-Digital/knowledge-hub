@@ -1,7 +1,6 @@
-import {eventClickDeocStnDashBoard} from '../hcl/deoc/po2.js';
-import {eventClickHCL} from '../catalog.js';
-import {eventClickButtonSetting} from './setting.js';
-import { eventInitCatalog } from '../home.js';
+import { eventClickPCL } from '../../catalog.js';
+import { eventClickButtonSetting } from '../../component/setting.js';
+import { eventInitCatalog } from '../../home.js';
 
 export function eventClearWindown() {
     const workspace_win = document.querySelector(".dashboard-container");
@@ -29,7 +28,7 @@ export function eventClickDeocPCL(){
 
 export function eventHomeClick(){
     eventClearWindown();
-    eventClickHCL();
+    eventClickPCL();
 }
 
 function eventDatabaseClick(){
@@ -111,7 +110,7 @@ export function eventCreateButtonBarHome(){
     buttonGen();
 }
 
-export function eventCreateButtonBarPCL(){
+export function eventCreateButtonBarDEOCPCL(){
     const button_bar = document.querySelector(".button-bar");
     while(button_bar.firstChild){
         button_bar.removeChild(button_bar.firstChild);

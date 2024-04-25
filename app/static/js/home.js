@@ -1,4 +1,4 @@
-import { eventClickHCL } from "./catalog.js"
+import { eventClickHCL, eventClickPCL} from "./catalog.js"
 import { eventClearWindown } from "./component/button_bar.js";
 import { clearDatePicker } from "./component/datetime.js";
 import { clearMachineBar } from "./component/machine.js";
