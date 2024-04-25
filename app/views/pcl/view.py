@@ -11,8 +11,21 @@ from app.utils.function import *
 pcl = Blueprint("pcl", __name__)
 
 
-@pcl.route("/qltdata/table_imagefail_datecode/push")
-def table_imagefail_datecode_push():
-    columns = getColumns("Table_ImageFail_DateCode")
-    tableToAppEngineSTN("DESKTOP-DGEHS9H",
-    U-CheckDate-Barcode", "Table_ImageFail_DateCode", columns)
+@pcl.route("/deoc_trend_pcl")
+def deoc_trend_pcl():
+    pass
+
+
+@pcl.route("/deoc_line_trend_pcl")
+def deoc_line_trend_pcl():
+    pass
+
+
+@pcl.route("/deoc_sku_trend_pcl")
+def deoc_sku_trend_pcl():
+    pass
+
+
+
+
+    
