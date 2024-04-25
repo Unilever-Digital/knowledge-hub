@@ -52,7 +52,7 @@ def create_app(test_config=None):
     except OSError:
         pass
 
-    @app.route('/login')
+    @app.route('/')
     def main():
         return redirect(url_for('blue_print.login'))
     
