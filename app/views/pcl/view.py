@@ -13,6 +13,9 @@ pcl = Blueprint("pcl", __name__)
 
 @pcl.route("/deoc_trend_pcl", method = "POST")
 def deoc_trend_pcl():
+    conn = connectToMongoDB("Vision_Mas140")
+    collection1 = conn["Table_ResultCarton"]
+    collection2 = conn["Table_ResultCap"]
     
     pass
 
