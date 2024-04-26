@@ -223,7 +223,6 @@ export async function eventClickDeocMas140DashBoard(){
     dashboardContainer.appendChild(container_col2);
     dashboardContainer.appendChild(container_inside);
 
-    initMachineBarPacking();
     initDatePicker();
     eventCreateButtonBarDEOCPCL();
 }
