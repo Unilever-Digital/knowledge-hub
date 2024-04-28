@@ -565,9 +565,15 @@ li .button:hover {
 .chat-button-bar button i {
     margin-top: 0px;
     position: relative;
-    font-size: 11px;
+    font-size: 10px;
+    font-weight: 500;
     object-fit: fill;
     color: #000000;
+    visibility: hidden;
+}
+
+.chat-button-bar:hover button i {
+    visibility: visible;
 }
 
 .btn {
