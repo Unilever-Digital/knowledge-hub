@@ -632,3 +632,102 @@ li .button:hover {
     left: 10px;
     top: -10px;
 }
+
+.chat-message {
+    padding: 5px;
+    margin-bottom: 0px;
+    margin-left: 5px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px #f1f1f1;
+    font-size: 10px;
+    font-weight: 300;
+}
+
+.user-message {
+    position: relative;
+    background-color: #dbe3fc;
+    color: #000000;
+    font-size: 12px;
+    font-weight: 300;
+    border-width: 1px;
+    border-color: #000;
+    border-radius: 12px;
+    width: fit-content;
+    max-width: 90%;
+    margin-right: 15px;
+    margin-left: auto;
+    padding-right: 5px;
+    padding-top: 5px;
+    text-align: right;
+    box-shadow: #120662;
+    justify-self: end;
+    box-shadow: #bfd4ff 1px 1px;
+    display: flex;
+    height: fit-content;
+}
+
+.bot-message {
+    position: relative;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    font-size: 12px;
+    font-weight: 300;
+    border-width: 1px;
+    border-color: #000;
+    border-radius: 16px;
+    margin-left: 15px;
+    width: fit-content;
+    max-width: 90%;
+    text-align: left;
+    padding-left: 5px;
+    padding-top: 5px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    display: flex;
+    height: fit-content;
+}
+
+.message-text pre code {
+    font-size: 10x;
+    white-space: pre-wrap;
+}
+
+.user-icon {
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+}
+
+.bot-icon {
+    background-size: cover;
+    background-position: center center;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    margin-right: 3px;
+}
+
+.loader {
+    border: 10px solid #f3f3f3;
+    /* Light grey */
+    border-top: 10px solid #244dcb;
+    /* Blue */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    z-index: 9999999;
+    margin-right: 40%;
+    margin-left: 40%;
+    margin-top: 60%;
+    animation: spin 2s linear infinite;
+    position: fixed;
+    position: absolute;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
