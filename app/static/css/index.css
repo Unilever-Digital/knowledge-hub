@@ -565,7 +565,7 @@ li .button:hover {
 .chat-button-bar button i {
     margin-top: 0px;
     position: relative;
-    font-size: 10px;
+    font-size: 9px;
     font-weight: 500;
     object-fit: fill;
     color: #000000;
