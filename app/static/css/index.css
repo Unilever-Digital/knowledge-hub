@@ -493,6 +493,12 @@ li .button:hover {
     box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
 }
 
+.chat-box-container form {
+    position: relative;
+    height: 40px;
+    bottom: 0px;
+}
+
 .chat-box-container,
 .chat-box-container>* {
     zoom: 1.0;
@@ -531,8 +537,8 @@ li .button:hover {
     min-width: 90%;
     margin-left: 10px;
     margin-right: 10px;
-    margin-top: 10%;
-    margin-bottom: 3%;
+    margin-top: 0%;
+    margin-bottom: 0%;
     background-color: #ffffff;
     font-size: 12px;
     padding-left: 5px;

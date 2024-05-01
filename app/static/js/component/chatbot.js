@@ -207,7 +207,7 @@ function changeHeightOpen() {
     button_box.style.borderBottomLeftRadius = "0px";
     chat_entry.style.visibility = "visible";
     chatbox.style.visibility = "visible";
-    chat_entry.style.marginTop = "10%"
+    chat_entry.style.marginTop = "0%"
 }
 
 function changeHeightFullScreen() {
@@ -221,7 +221,6 @@ function changeHeightFullScreen() {
     button_box.style.borderBottomRightRadius = "0px";
     button_box.style.borderBottomLeftRadius = "0px";
     chat_entry.style.visibility = "visible";
-    chat_entry.style.marginTop = "50%"
 }
 
 document.addEventListener("DOMContentLoaded", function() {
