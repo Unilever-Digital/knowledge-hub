@@ -34,6 +34,8 @@ export function eventInitCatalog(){
     const hcl = factoryCatalog("factory-catalog", "HCL", eventClickHCL);
     const pcl = factoryCatalog("factory-catalog", "PCL", eventClickPCL);
     const oral = factoryCatalog("factory-catalog", "ORAL");
+    const food = factoryCatalog("factory-catalog", "FOOD");
+    const main_office = factoryCatalog("factory-catalog", "Main-office");
 
     while(workspace.firstChild){
         workspace.removeChild(workspace.firstChild);
@@ -41,6 +43,8 @@ export function eventInitCatalog(){
     workspace.appendChild(hcl);
     workspace.appendChild(pcl);
     workspace.appendChild(oral);
+    workspace.appendChild(food);
+    workspace.appendChild(main_office);
 
     eventCreateButtonBarHome();
 }

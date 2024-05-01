@@ -184,14 +184,20 @@ function changeHeightClose() {
     const chat_entry = document.querySelector(".chat-entry");
     const button_box = document.querySelector(".chat-button-bar");
     const chatbox = document.querySelector(".chat-box");
+    const entry_form = document.querySelector(".entry-form");
     // Check the current height and toggle between 400px and 25px
     // Check the current height and toggle between 400px and 25px
-    box.style.height = "33px";
-    box.style.width = "350px";
     chat_entry.style.visibility = "hidden";
     chatbox.style.visibility ="hidden";
+    entry_form.style.visibility = "hidden";
+
+    box.style.height = "33px";
+    box.style.width = "350px";
+    chatbox.style.height = "0px";
+    entry_form.style.height = "0px";
     button_box.style.borderBottomRightRadius = "12px";
     button_box.style.borderBottomLeftRadius = "12px";
+    button_box.style.height = "33px";
 }
 
 function changeHeightOpen() {
@@ -199,6 +205,7 @@ function changeHeightOpen() {
     const button_box = document.querySelector(".chat-button-bar");
     const chat_entry = document.querySelector(".chat-entry");
     const chatbox = document.querySelector(".chat-box");
+    const entry_form = document.querySelector(".entry-form");
     // Check the current height and toggle between 400px and 25px
     box.style.height = "500px";
     box.style.width = "350px";
@@ -207,26 +214,37 @@ function changeHeightOpen() {
     button_box.style.borderBottomLeftRadius = "0px";
     chat_entry.style.visibility = "visible";
     chatbox.style.visibility = "visible";
-    chat_entry.style.marginTop = "0%"
+    entry_form.style.visibility = "visible";
+    chatbox.style.height = "400px";
+    chat_entry.style.marginTop = "10px";
+    entry_form.style.height = "40px";
 }
 
 function changeHeightFullScreen() {
     const box = document.querySelector(".chat-box-container");
     const button_box = document.querySelector(".chat-button-bar");
     const chat_entry = document.querySelector(".chat-entry");
+    const entry_form = document.querySelector(".entry-form");
+    const chatbox = document.querySelector(".chat-box");
     // Check the current height and toggle between 400px and 25px
-    box.style.height = "800px";
-    box.style.width = "600px";
+    box.style.height = "900px";
+    box.style.width = "95%";
     chat_entry.style.height = "35px";
     button_box.style.borderBottomRightRadius = "0px";
     button_box.style.borderBottomLeftRadius = "0px";
     chat_entry.style.visibility = "visible";
+    entry_form.style.visibility = "visible";
+    chatbox.style.visibility = "visible";
+    chatbox.style.height = "800px";
+    entry_form.style.height = "40px";
 }
 
 document.addEventListener("DOMContentLoaded", function() {
     const clickHeightOpen = document.querySelector(".chat-button-openbutton");
     const clickHeightClose = document.querySelector(".chat-button-closebutton");
+    const clickFullScreen = document.querySelector(".chat-button-fullscreen");
 
     clickHeightClose.addEventListener("click", changeHeightClose);
     clickHeightOpen.addEventListener("click", changeHeightOpen);
+    clickFullScreen.addEventListener("click",changeHeightFullScreen);
 });
