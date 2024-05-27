@@ -1,6 +1,6 @@
 # Knowledge-hub
 
-## Description
+### Description
 
 Knowledge-hub spa application build with:
 - javascript
@@ -39,7 +39,7 @@ Common open-source licenses include MIT, Apache, and GPL.
 
 ## Contributors
 
-Unilever Digital Team
+Unilever Digital Team.
 
 ## Author(s)
 
