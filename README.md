@@ -7,8 +7,9 @@ This project is a Single-Page Application (SPA) designed to serve as a centraliz
 
 ### Tech Stack:
 
-Frontend: JavaScript, HTML, CSS, Bootstrap CSS
-Backend (optional): Python Flask (indicated by main.py in the Test section)
+- Frontend: JavaScript, HTML, CSS, Bootstrap CSS
+
+- Backend: Python Flask (indicated by main.py in the Test section)
 Features:
 
 ### Interactive Dashboard:
@@ -23,8 +24,10 @@ Features:
 - Installation:
 
 ### Clone the repository.
-Install required dependencies: pip install -r requirements.txt (if using a Python backend)
+Install required dependencies: 
+    pip install -r requirements.txt (if using a Python backend)
 Testing:
+    python main.py
 
 ### Run the application: python main.py (if using a Python backend)
 Screenshots:
@@ -42,10 +45,3 @@ Unilever Digital Team
 Author(s):
 
 Lê Chơn Minh Đạt (2024), Ho Chi Minh University of Technology & Ho Chi Minh University of Science (affiliation can be combined), Unilever (if applicable)
-Additional Improvements:
-
-Consider adding a brief overview of DEOC and LINE data (if relevant).
-If the application is publicly available, include a deployment guide.
-Provide instructions on how to contribute to the project (if applicable).
-Use consistent formatting and markdown syntax for better readability.
-I hope this enhanced README.md effectively communicates the project's purpose, functionality, and setup process!
