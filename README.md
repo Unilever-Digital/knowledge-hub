@@ -28,9 +28,10 @@ It leverages various technologies to deliver a user-friendly and informative exp
 ### Clone the repository.
 Install required dependencies: 
 
-        pip install -r requirements.txt (if using a Python backend)
+        pip install -r requirements.txt
     
-Testing:
+Testing local server runing:
+
         python main.py
 
 ### Run the application: python main.py (if using a Python backend)
