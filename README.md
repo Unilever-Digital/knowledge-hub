@@ -75,13 +75,13 @@ Access the API endpoints at `http://localhost:8080` by default.
 
 <img width="600" alt="Screenshot 2024-04-20 at 19 26 35" src="https://github.com/Unilever-Digital/deoc-dashboard-hcl/assets/93373784/7fc9070c-5b74-4a76-a665-1f0e1607219b">
 
-### License:
 
-The project uses a commonly used open-source license (specific license to be determined).
 
-### Contributors:
+### Contributors
+- [Le Chon Minh Dat](https://github.com/lcmd65)
 
-Unilever Digital Team
-Contact Author(s):
+### License
+This project is licensed under the [MIT License](LICENSE).
 
-Lê Chơn Minh Đạt (2024), Ho Chi Minh University of Technology & Ho Chi Minh University of Science (affiliation can be combined), Unilever (if applicable)
+### Support
+For support or inquiries, please contact [Le-chon-minh.dat@unilever.com](mailto:Le-chon-minh.dat@unilever.com).
