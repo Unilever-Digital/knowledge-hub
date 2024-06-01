@@ -1,6 +1,6 @@
 import { eventClearWindown, eventCreateButtonBarDEOC } from "../../component/button_bar.js";
 import { initDatePicker } from "../../component/datetime.js";
-import {clearMachineBar, initMachineBarPacking} from "../../component/machine.js"
+import { clearMachineBar, initMachineBarPacking } from "../../component/machine.js"
 
 async function createChartDashboard() {
     const dashboard = document.createElement("div");
@@ -83,17 +83,18 @@ async function createLineChartDEOCTrend() {
         data: {
             labels: ['11', '12', '13', '14', '15', '16', '17', '18', '19', '20'],
             datasets: [{
-                label: 'DEOC Trend Realtime',
-                data: [12, 19, 3, 5, 2, 3],
-                borderColor: 'rgba(54, 162, 235, 1)',
-                borderWidth: 1
-            },
-            {
-                label: 'DEOC Prediction',
-                data: [12, 19, 3, 5, 2, 5, 7, 10 ,6],
-                borderColor: 'rgba(255, 99, 132, 1)',
-                borderWidth: 1
-            }]
+                    label: 'DEOC Trend Realtime',
+                    data: [12, 19, 3, 5, 2, 3],
+                    borderColor: 'rgba(54, 162, 235, 1)',
+                    borderWidth: 1
+                },
+                {
+                    label: 'DEOC Prediction',
+                    data: [12, 19, 3, 5, 2, 5, 7, 10, 6],
+                    borderColor: 'rgba(255, 99, 132, 1)',
+                    borderWidth: 1
+                }
+            ]
         },
         options: {
             scales: {
@@ -125,24 +126,25 @@ async function createLineChartLineTrend() {
         data: {
             labels: ['11', '12', '13', '14', '15', '16', '17', '18', '19', '20'],
             datasets: [{
-                label: 'Line Trend Per Week',
-                data: [12, 19, 3, 5, 2, 3],
-                borderColor: 'rgba(54, 162, 235, 1)',
-                borderWidth: 1
-            },
-            {
-                label: 'Line Trend Prediction',
-                data: [12, 19, 3, 5, 2, 5, 7, 10 ,6],
-                borderColor: 'rgba(255, 99, 132, 1)',
-                borderWidth: 1
-            }]
+                    label: 'Line Trend Per Week',
+                    data: [12, 19, 3, 5, 2, 3],
+                    borderColor: 'rgba(54, 162, 235, 1)',
+                    borderWidth: 1
+                },
+                {
+                    label: 'Line Trend Prediction',
+                    data: [12, 19, 3, 5, 2, 5, 7, 10, 6],
+                    borderColor: 'rgba(255, 99, 132, 1)',
+                    borderWidth: 1
+                }
+            ]
         },
         options: {
             scales: {
                 x: {
                     grid: {
-                    display: false // Tắt lưới dọc trên trục x
-                },
+                        display: false // Tắt lưới dọc trên trục x
+                    },
                     beginAtZero: true
                 }
             }
@@ -169,17 +171,18 @@ async function createLineChartSKUTrend() {
         data: {
             labels: ['11', '12', '13', '14', '15', '16', '17', '18', '19', '20'],
             datasets: [{
-                label: 'SKU Trend Per Week',
-                data: [12, 19, 3, 5, 2, 3],
-                borderColor: 'rgba(54, 162, 235, 1)',
-                borderWidth: 1
-            },
-            {
-                label: 'SKU Trend Prediction',
-                data: [12, 19, 3, 5, 2, 5, 7, 10 ,6],
-                borderColor: 'rgba(255, 99, 132, 1)',
-                borderWidth: 1
-            }]
+                    label: 'SKU Trend Per Week',
+                    data: [12, 19, 3, 5, 2, 3],
+                    borderColor: 'rgba(54, 162, 235, 1)',
+                    borderWidth: 1
+                },
+                {
+                    label: 'SKU Trend Prediction',
+                    data: [12, 19, 3, 5, 2, 5, 7, 10, 6],
+                    borderColor: 'rgba(255, 99, 132, 1)',
+                    borderWidth: 1
+                }
+            ]
         },
         options: {
             scales: {
@@ -205,7 +208,7 @@ async function createContainerInside() {
 
 // Initialize the date picker
 
-export async function eventClickDeocStnDashBoard(){
+export async function eventClickDeocStnDashBoard() {
     clearMachineBar();
     const dashboardContainer = document.querySelector(".dashboard-container"); // Changed to correct selector
     eventClearWindown();
@@ -233,5 +236,3 @@ export async function eventClickDeocStnDashBoard(){
     initDatePicker();
     eventCreateButtonBarDEOC();
 }
-
-
