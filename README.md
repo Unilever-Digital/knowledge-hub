@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-### Description
-=======
-# Knowledge-hub
-### Project Title: Knowledge Hub SPA
-
 ### Description:
->>>>>>> 404871062ac71bfff55b20326569b546cb5fbc89
 
 This project is a Single-Page Application (SPA) designed to serve as a centralized knowledge hub. 
 It leverages various technologies to deliver a user-friendly and informative experience.
