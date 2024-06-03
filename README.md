@@ -16,7 +16,9 @@ It leverages various technologies to deliver a user-friendly and informative exp
 - **LINE Trend**: Track trends in LINE data (unspecified in the prompt).
 - **SKU Trend**: Analyze trends for Stock Keeping Units (SKUs).
 
-#### Insights: Gain valuable insights from the data.
+#### Insights: 
+Gain valuable insights from the data.
+
 #### Safety Chat:
 - Access safety information.
 - Receive safety advice.
@@ -36,26 +38,29 @@ Access the API endpoints at `http://localhost:8080` by default.
 ## Source
 ```
 .
-├── instance
-├── public
+├── instance                  # config backend server
+├── public                    # public icon/image source file
 │   └── favicon.ico
 ├── sqlite
-│   └── .db
+│   └── .db                   # database file
 │   └── ...
 ├── src
 │   └── controls
+│       └── controls          # utils of every single page
+│       └── query             # connection info for 2nd server database
+│       └── ..
 │   └── models
 │   └── static                # Public folder
-│     └── images              # Image used by default template for document site (not api site)
+│     └── images              # Image used by default template
 │         └── png
 │         └── jpg
 │         └── svg
 │     └── css
 │     └── js
-│   └── templates             # Template ui for document site (not api site)
+│   └── templates             # Template ui 
 │   └── views                 # API
 │   └── env.py
-├── test
+├── test                      # test
 ├── .gitignore
 ├── .python-version           # python version define file
 ├── config.py                 # config backend server file
@@ -79,6 +84,8 @@ Access the API endpoints at `http://localhost:8080` by default.
 
 ### Contributors
 - [Le Chon Minh Dat](https://github.com/lcmd65)
+- [Nguyen Tong Lam](https://github.com/lamnt01)
+- [Tran Minh Quan](https://github.com/fakerqmt)
 
 ### License
 This project is licensed under the [MIT License](LICENSE).
