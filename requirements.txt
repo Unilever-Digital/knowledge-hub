@@ -11,3 +11,4 @@ requests
 schedule
 datetime
 pylint
+pytest
