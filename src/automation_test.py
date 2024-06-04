@@ -40,14 +40,17 @@ def test_home(client):
     response = client.get('/home')
     html_data = response.data.decode('utf-8')
     print(html_data)
+    
 
-if __name__ == "__main__":
-    """Configuration of automation test
-    Yields:
-        _func: _router test_
-    """
-    client = client()
-    for index in range(100):
-        test_index(client)
-        test_login(client)
-        test_home(client)
+# Home page test connection
+def test_home(client):
+    response = client.get('/home/')
+    html_data = response.data.decode('utf-8')
+    print(html_data)
+    
+
+# Home page test connection
+def test_home(client):
+    response = client.get('/home')
+    html_data = response.data.decode('utf-8')
+    print(html_data)
