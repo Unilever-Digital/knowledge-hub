@@ -56,5 +56,4 @@ export function eventClickPCL() {
     button_click_deoc.addEventListener('click', () => {
         eventClickDeocMas140DashBoard();
     });
-    eventCreateButtonBarHome();
-}
+    eventCreateButtonB
