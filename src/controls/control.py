@@ -1,13 +1,10 @@
-from pymongo import MongoClient
 import pyodbc
 import json
 import pymongo
 import schedule
 import time
-import requests
 from datetime import datetime
-import pyodbc
-from src.utils.function import *
+from src.utils.function import read_table_json
 
 def connectToSqlServerWindowAuthen(server, database):
     try:
@@ -56,7 +53,6 @@ def connectToMongoDB(database, table):
 
 def noSqlTransform(rows):
     """tranform Sql table to tree Node json
-
     Args:
         table (dataframe)): sql table
     """
@@ -76,15 +72,12 @@ def noSqlTransform(rows):
 def tableSqlServerFetch(conn, table_name, columns):
     """
     Fetch data from a SQL Server table and convert it to JSON format.
-
     Args:
         conn (connection): Connection object to the SQL Server database.
         table_name (str): Name of the table from which to fetch data.
         columns (list): List of column names in the table.
-
     Returns:
         str: JSON representation of the fetched data.
-
     Raises:
         Exception: If an error occurs during the execution.
     """
@@ -98,7 +91,6 @@ def tableSqlServerFetch(conn, table_name, columns):
         for row in rows:
             result_dict = {col: value for col, value in zip(columns, row)}
             results.srcend(result_dict)
-
         # Convert the list of dictionaries to JSON
         return results
     except Exception as e:
@@ -109,15 +101,12 @@ def tableSqlServerFetch(conn, table_name, columns):
 def tableMongoDBFetch(collection, query=None, projection=None):
     """
     Fetch data from a MongoDB collection and convert it to JSON format.
-
     Args:
         collection (pymongo.collection.Collection): Collection object from which to fetch data.
         query (dict): Query to filter documents (optional).
         projection (dict): Projection to include/exclude fields in the result (optional).
-
     Returns:
         str: JSON representation of the fetched data.
-
     Raises:
         Exception: If an error occurs during the execution.
     """
@@ -127,7 +116,6 @@ def tableMongoDBFetch(collection, query=None, projection=None):
             query = {}
         if projection is None:
             projection = {}
-            
         cursor = collection.find(query, projection)
         rows = list(cursor)
         

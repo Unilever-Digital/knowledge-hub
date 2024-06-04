@@ -1,10 +1,9 @@
-import {eventClickDeocStnDashBoard} from './hcl/deoc/po2.js';
-import {eventClickDeoc, eventCreateButtonBarDEOC, eventCreateButtonBarHome } from './component/button_bar.js';
-import {eventClearWindown} from './component/button_bar.js'
-import {clearDatePicker } from './component/datetime.js';
+import { eventClickDeocStnDashBoard } from './hcl/deoc/po2.js';
+import { eventClickDeoc, eventCreateButtonBarDEOC, eventCreateButtonBarHome } from './component/button_bar.js';
+import { eventClearWindown } from './component/button_bar.js'
+import { clearDatePicker } from './component/datetime.js';
 import { clearMachineBar } from './component/machine.js';
 import { eventClickDeocMas140DashBoard } from './pcl/deoc/mas140.js';
-
 
 function createComponent(content, id, image) {
     const component = document.createElement("div");
@@ -21,14 +20,14 @@ function createComponent(content, id, image) {
     return component;
 }
 
-function activeClickTabDeoc(){
+function activeClickTabDeoc() {
     eventCreateButtonBarDEOC();
     const deoc_button = document.querySelector(".button.deoc");
     deoc_button.classList.add("active");
 }
 
 // home button lick
-export function eventClickHCL(){
+export function eventClickHCL() {
     eventClearWindown();
     clearDatePicker();
     clearMachineBar();
@@ -38,13 +37,13 @@ export function eventClickHCL(){
     var component = createComponent("DEOC Dashboard", "deoc-button-home", "vision-cam.jpg");
     workspace.appendChild(component);
     const button_click_deoc = document.querySelector(".deoc-button-home");
-    button_click_deoc.addEventListener('click', ()=>{
+    button_click_deoc.addEventListener('click', () => {
         eventClickDeocStnDashBoard();
     });
     eventCreateButtonBarHome();
 }
 
-export function eventClickPCL(){
+export function eventClickPCL() {
     eventClearWindown();
     clearDatePicker();
     clearMachineBar();
@@ -54,7 +53,7 @@ export function eventClickPCL(){
     var component = createComponent("DEOC Dashboard", "deoc-button-home", "vision-cam.jpg");
     workspace.appendChild(component);
     const button_click_deoc = document.querySelector(".deoc-button-home");
-    button_click_deoc.addEventListener('click', ()=>{
+    button_click_deoc.addEventListener('click', () => {
         eventClickDeocMas140DashBoard();
     });
     eventCreateButtonBarHome();
