@@ -24,4 +24,4 @@ jobs:
     
     - name: Analyzing the code with Pylint
       run: |
-        pytest test/test.py
+        pytest knowledge-hub/test/test.py
