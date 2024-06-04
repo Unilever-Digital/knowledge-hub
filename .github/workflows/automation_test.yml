@@ -26,4 +26,4 @@ jobs:
       env:
         PYTHONPATH: src
       run: |
-        pytest test/test.py
+        pytest src/automation_test.py
