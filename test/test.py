@@ -1,10 +1,14 @@
-import pylint
 import pytest
 from src import create_app
 
 app = create_app()
 
 if __name__ == "__main__":
+    """configuration of automation test
+
+    Yields:
+        _func: _router test_
+    """
     @pytest.fixture
     def client():
         with app.test_client() as client:
