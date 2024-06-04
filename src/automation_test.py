@@ -46,8 +46,8 @@ if __name__ == "__main__":
     Yields:
         _func: _router test_
     """
+    client = client()
     for index in range(100):
-        client = client()
         test_index(client)
         test_login(client)
         test_home(client)
