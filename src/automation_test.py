@@ -43,7 +43,7 @@ def test_home(client):
     
 
 # Home page test connection
-def test_home(client):
+def test_home_2(client):
     response = client.get('/home/')
     html_data = response.data.decode('utf-8')
     print(html_data)
