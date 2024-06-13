@@ -5,7 +5,11 @@ It leverages various technologies to deliver a user-friendly and informative exp
 
 ### Tech Stack
 
-- Frontend: JavaScript, HTML, CSS, Bootstrap CSS
+- Frontend: 
+        - JavaScript, 
+        - HTML5, CSS3, Bootstrap CSS,...
+        - Taiwind
+        
 - Backend: Python Flask (indicated by main.py in the Test section)
 
 ### Clone the repository
@@ -15,9 +19,7 @@ It leverages various technologies to deliver a user-friendly and informative exp
 - Install required dependencies: 
 
         python -m venv env
-        
         env\Scripts\activate.bat
-
         pip install -r requirements.txt
     
 - Testing local server runing:
@@ -45,17 +47,17 @@ Access the API endpoints at `http://localhost:8080` by default.
 │       └── query             # connection info for 2nd server database
 │       └── ..
 │   └── models
-│   └── static                # Public folder
-│     └── images              # Image used by default template
+│   └── static                # public folder
+│     └── images              # image used by default template
 │         └── png
 │         └── jpg
 │         └── svg
 │     └── css
 │     └── js
-│   └── templates             # Template ui 
-│   └── views                 # API
+│   └── templates             # template ui 
+│   └── views                 # endpoint API
 │   └── env.py
-├── test                      # test
+├── test                      # test root
 ├── .gitignore
 ├── .python-version           # python version define file
 ├── config.py                 # config backend server file
