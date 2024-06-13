@@ -1,13 +1,12 @@
 import json
 
 def read_json_from_file(file_path):
-    """_summary_
-
+    """ Read json file
     Args:
-        file_path (_type_): _description_
+        file_path (.json): .json data file
 
     Returns:
-        _type_: _description_
+        data: json string
     """
     try:
         with open(file_path, 'r') as file:
