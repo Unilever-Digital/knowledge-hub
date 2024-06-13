@@ -13,13 +13,18 @@ It leverages various technologies to deliver a user-friendly and informative exp
 
 ### Installation
 - Install required dependencies: 
+        python -m venv env
+        
+        env\Scripts\activate.bat
 
         pip install -r requirements.txt
     
 - Testing local server runing:
+
         python main.py
 
 - Testing with guricon server (for Mac):
+
         gunicorn -c instance/config.py wsgi:app
 
 Access the API endpoints at `http://localhost:8080` by default.
