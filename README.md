@@ -1,6 +1,6 @@
 ### Knowledge-hub
 
-This project is a Single-Page Application (SPA) designed to serve as a centralized knowledge hub. 
+Knowledge-hub is a Single-Page Application (SPA) designed to serve as a centralized knowledge hub. 
 It leverages various technologies to deliver a user-friendly and informative experience.
 
 ### Tech Stack
@@ -9,7 +9,7 @@ It leverages various technologies to deliver a user-friendly and informative exp
 
 - **Backend**: `Flask`![Python](https://img.shields.io/badge/python-3670A0?style=flat&logo=python&logoColor=ffdd54)  (indicated by main.py in the Test section)
 
-- **python-version**: [![python](https://img.shields.io/badge/python-3.11.0-brightgreen.svg?style=flat)](https://www.ted.com/talks/simon_sinek_how_great_leaders_inspire_action)
+python-version: [![python](https://img.shields.io/badge/python-3.11.0-brightgreen.svg?style=flat)](https://www.ted.com/talks/simon_sinek_how_great_leaders_inspire_action)
 
 
 ### Clone the repository
