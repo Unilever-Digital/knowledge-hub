@@ -8,18 +8,19 @@ It leverages various technologies to deliver a user-friendly and informative exp
 - Frontend: JavaScript, HTML, CSS, Bootstrap CSS
 - Backend: Python Flask (indicated by main.py in the Test section)
 
-#### Installation:
-
+### Clone the repository
         git clone https://github.com/Unilever-Digital/knowledge-hub
 
-### Clone the repository
-Install required dependencies: 
+### Installation
+- Install required dependencies: 
 
         pip install -r requirements.txt
     
-Testing local server runing:
-
+- Testing local server runing:
         python main.py
+
+- Testing with guricon server (for Mac):
+        gunicorn -c instance/config.py wsgi:app
 
 Access the API endpoints at `http://localhost:8080` by default.
 
