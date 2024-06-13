@@ -75,7 +75,6 @@ Access the API endpoints at `http://localhost:8080` by default.
 
 ### Mashup
 
-Login
 <img width="800" alt="image" src="https://github.com/Unilever-Digital/knowledge-hub/assets/93373784/124d84bd-cb56-44f4-ad63-52329103972e">
 
 <img width="800" alt="Screenshot 2024-04-20 at 19 26 39" src="https://github.com/Unilever-Digital/deoc-dashboard-hcl/assets/93373784/f25ecbcc-a5a7-4d56-b8e9-63612b127baf">
