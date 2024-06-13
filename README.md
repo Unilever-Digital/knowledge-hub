@@ -13,6 +13,7 @@ It leverages various technologies to deliver a user-friendly and informative exp
 
 ### Installation
 - Install required dependencies: 
+
         python -m venv env
         
         env\Scripts\activate.bat
