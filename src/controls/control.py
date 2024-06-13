@@ -6,7 +6,7 @@ import time
 from datetime import datetime
 from src.utils.function import read_table_json
 
-def connectToSqlServerWindowAuthen(server, database):
+def sqlserver_connection_windowauthen(server, database):
     try:
         # Establishing the connection
         conn = pyodbc.connect(driver="{SQL Server}", 
@@ -18,7 +18,7 @@ def connectToSqlServerWindowAuthen(server, database):
         return None
 
 
-def connectToSqlServer(server, database, username, password):
+def sqlserver_connection_user_method(server, database, username, password):
     try:
         # Establishing the connection
         try:
@@ -38,9 +38,13 @@ def connectToSqlServer(server, database, username, password):
         print("Error connecting to SQL Server:", e)
         return None
     
-def connectToMongoDB(database, table):
+def cloud_database_cursor(database, table):
     try:
-        uri = "mongodb+srv://unilever-digital:U2024-digital@cluster0.ixcliyp.mongodb.net/"
+        # load secret key
+        with open("src/secret.json", "r") as file:
+            key = json.load(file)
+        uri = key.get("cloud")
+        
         # Establishing the connection
         conn = pymongo.MongoClient(uri)
         db =  conn[database]
@@ -51,13 +55,12 @@ def connectToMongoDB(database, table):
         return None
 
 
-def noSqlTransform(rows):
+def nosql_transform(rows):
     """tranform Sql table to tree Node json
     Args:
         table (dataframe)): sql table
     """
     try:
-    
         # Convert rows to a list of dictionaries
         results = []
         for row in rows:
@@ -69,7 +72,7 @@ def noSqlTransform(rows):
         print(e)
 
 
-def tableSqlServerFetch(conn, table_name, columns):
+def database_cursor(conn, table_name, columns):
     """
     Fetch data from a SQL Server table and convert it to JSON format.
     Args:
@@ -98,7 +101,7 @@ def tableSqlServerFetch(conn, table_name, columns):
         raise
 
 
-def tableMongoDBFetch(collection, query=None, projection=None):
+def database_fetch_cursor(collection, query=None, projection=None):
     """
     Fetch data from a MongoDB collection and convert it to JSON format.
     Args:
@@ -130,7 +133,7 @@ def tableMongoDBFetch(collection, query=None, projection=None):
         raise
     
 
-def tableMongoDBFetch_100data(collection, query=None, projection=None):
+def database_fetch_100line(collection, query=None, projection=None):
     """
     Fetch 100 rows of data from a MongoDB collection and convert it to JSON format.
 
@@ -180,10 +183,19 @@ def schedule_api_calls():
         schedule.run_pending()
         time.sleep(1)
 
-def tableTosrcEngineSTN(server, database, table, columns):
-    conn = connectToSqlServerWindowAuthen(server, database)
+
+def table_data_to_cloud(server, database, table, columns):
+    """
+        push data src stn
+    Args:
+        server (_type_): _description_
+        database (_type_): _description_
+        table (_type_): _description_
+        columns (_type_): _description_
+    """
+    conn = sqlserver_connection_windowauthen(server, database)
     cursor = conn.cursor()
-    collection = connectToMongoDB(database, table)
+    collection = cloud_database_cursor(database, table)
     
     # Query the SQL table
     cursor.execute(f"SELECT {', '.join(columns)} FROM {table}")
@@ -197,14 +209,16 @@ def tableTosrcEngineSTN(server, database, table, columns):
         
 
 def realtime_rocessing():
+    """_summary_
+    """
     data = read_table_json()
     for item in data:
         table = item['table']
         columns = item['column']
         print(table)
-        conn = connectToSqlServerWindowAuthen("DESKTOP-DGEHS9H", "U-CheckDate-Barcode")
+        conn = sqlserver_connection_windowauthen("DESKTOP-DGEHS9H", "U-CheckDate-Barcode")
         cursor = conn.cursor()
-        collection = connectToMongoDB("U-CheckDate-Barcode", table)
+        collection = cloud_database_cursor("U-CheckDate-Barcode", table)
         # Query the SQL table
         
         cursor.execute(f"SELECT {', '.join(columns)} FROM {table}")
@@ -216,18 +230,34 @@ def realtime_rocessing():
             collection.insert_one(data)
 
 ######## processing in client dashboard src #################
+def query_data_deoc_po2(start, end, table):
+    """ Query data Deoc Po2
 
-def queryDataDeoc(start, end, table):
-    collection = connectToMongoDB("U-CheckDate-Barcode", table)
-    start_date = datetime.strptime("2024-04-17T00:00:00", "%Y-%m-%dT%H:%M:%S")
+    Args:
+        start (_type_): _description_
+        end (_type_): _description_
+        table (_type_): _description_
 
-    end_date = datetime.strptime("2024-04-19T23:59:59", "%Y-%m-%dT%H:%M:%S")
-    query = {
+    Returns:
+        _type_: _description_
+    """
+    collection = cloud_database_cursor("U-CheckDate-Barcode", table)
+    if start != None & end != None:
+        query = {
         "dateField": {
-            "$gte": start,
-            "$lte": end
+            "$gte": start_date,
+            "$lte": end_date
         }
-    }
+        }
+    else:
+        start_date = datetime.strptime("2024-04-17T00:00:00", "%Y-%m-%dT%H:%M:%S")
+        end_date = datetime.strptime("2024-04-19T23:59:59", "%Y-%m-%dT%H:%M:%S")
+        query = {
+            "dateField": {
+                "$gte": start_date,
+                "$lte": end_date
+            }
+        }
     cursor = collection.find(query)
     return cursor
 
