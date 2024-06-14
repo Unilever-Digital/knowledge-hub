@@ -16,7 +16,10 @@ python-version: [![python](https://img.shields.io/badge/python-3.11.0-brightgree
 - Install required dependencies: 
 
         python -m venv env
+  
         env\Scripts\activate.bat
+        # or source env/bin/activate
+  
         pip install -r requirements.txt
     
 - Testing local server runing:
