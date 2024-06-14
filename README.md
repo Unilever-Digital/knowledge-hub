@@ -1,7 +1,4 @@
-### Knowledge-hub
-
-Knowledge-hub is a Single-Page Application (SPA) designed to serve as a centralized knowledge hub. 
-It leverages various technologies to deliver a user-friendly and informative experience.
+Knowledge-hub is designed to serve as a centralized knowledge hub. It leverages various technologies to deliver a user-friendly and informative experience.
 
 ### Tech Stack
 
