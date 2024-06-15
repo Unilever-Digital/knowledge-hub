@@ -20,7 +20,9 @@ python-version: [![python](https://img.shields.io/badge/python-3.11.0-brightgree
         # or source env/bin/activate
   
         pip install -r requirements.txt
-    
+
+### Test on Local server
+   
 - Testing local server runing:
 
         python main.py
