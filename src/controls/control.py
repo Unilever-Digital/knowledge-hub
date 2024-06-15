@@ -208,8 +208,9 @@ def table_data_to_cloud(server, database, table, columns):
         collection.insert_one(data)
         
 
-def realtime_rocessing():
-    """_summary_
+def realtime_rocessing_data_hcl_stn():
+    """ realtime porcessing data of STN
+    
     """
     data = read_table_json()
     for item in data:
@@ -230,7 +231,7 @@ def realtime_rocessing():
             collection.insert_one(data)
 
 ######## processing in client dashboard src #################
-def query_data_deoc_po2(start, end, table):
+def query_data_deoc_hcl_stn(start, end, table):
     """ Query data Deoc Po2
 
     Args:

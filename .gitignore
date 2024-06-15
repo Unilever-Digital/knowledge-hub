@@ -4,3 +4,5 @@ env/
 .env
 .venv
 src/secret.json
+
+.DS_store
